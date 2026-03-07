@@ -18,7 +18,7 @@ export function Navbar() {
   }, []);
 
   const navLinks = [
-    { name: "Vehicles", href: "#vehicles" },
+    { name: "Fleet", href: "/vehicles" },
     { name: "About", href: "#about" },
     { name: "FAQ", href: "#faq" },
     { name: "Contact", href: "#contact" },
@@ -36,7 +36,7 @@ export function Navbar() {
         {/* Logo */}
         <Link href="/" className="group flex items-center gap-1 z-50">
           <span className="font-heading text-2xl font-bold tracking-tight text-[var(--color-brand-white)] uppercase group-hover:opacity-90 transition-opacity">
-            GE Rental
+            GW Rental
           </span>
         </Link>
 
@@ -52,9 +52,9 @@ export function Navbar() {
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[var(--color-amber)] transition-all duration-300 group-hover:w-full"></span>
             </Link>
           ))}
-          <button className="bg-[var(--color-amber)] text-[var(--color-brand-white)] px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-[#b5722e] hover:shadow-[0_4px_14px_0_rgba(212,136,58,0.39)] transition-all transform hover:-translate-y-0.5 ml-4">
-            Browse Fleet
-          </button>
+          <Link href="/vehicles" className="bg-[var(--color-amber)] text-[var(--color-brand-white)] px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-[#b5722e] hover:shadow-[0_4px_14px_0_rgba(212,136,58,0.39)] transition-all transform hover:-translate-y-0.5 ml-4">
+            Book Now
+          </Link>
         </nav>
 
         {/* Mobile Menu Toggle */}
@@ -83,9 +83,9 @@ export function Navbar() {
                 {link.name}
               </Link>
             ))}
-            <button className="bg-[var(--color-amber)] text-[var(--color-brand-white)] px-8 py-3 rounded-full text-lg font-semibold mt-4">
-              Browse Fleet
-            </button>
+            <Link href="/vehicles" className="bg-[var(--color-amber)] text-[var(--color-brand-white)] px-8 py-3 rounded-full text-lg font-semibold mt-4" onClick={() => setMobileMenuOpen(false)}>
+              Book Now
+            </Link>
           </motion.div>
         )}
       </div>

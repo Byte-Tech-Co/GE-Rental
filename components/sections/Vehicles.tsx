@@ -2,11 +2,13 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import { ArrowRight, Users, Fuel, Mountain, MapPin } from "lucide-react";
 
 export function Vehicles() {
   const categories = [
     {
+      id: "Car",
       type: "Cars",
       title: "Comfortable sedans & SUVs",
       desc: "Perfect for family trips to Kaziranga or long intercity drives across Assam.",
@@ -20,6 +22,7 @@ export function Vehicles() {
       badge: "Most Popular",
     },
     {
+      id: "Bike",
       type: "Bikes",
       title: "Rugged motorcycles",
       desc: "Conquer the mountain roads to Shillong or cruise along the Brahmaputra.",
@@ -32,6 +35,7 @@ export function Vehicles() {
       ],
     },
     {
+      id: "Scooty",
       type: "Scooties",
       title: "Effortless city rides",
       desc: "Light and easy to park. The smartest way to explore Guwahati's ghats and markets.",
@@ -125,9 +129,9 @@ export function Vehicles() {
                       <span className="text-sm font-medium"> / day</span>
                     </div>
                   </div>
-                  <button className="text-[var(--color-amber)] font-semibold flex items-center gap-1 hover:text-[#b5722e] transition-colors">
+                  <Link href={`/vehicles?category=${cat.id}`} className="text-[var(--color-amber)] font-semibold flex items-center gap-1 hover:text-[#b5722e] transition-colors">
                     Browse <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
-                  </button>
+                  </Link>
                 </div>
               </div>
             </motion.div>

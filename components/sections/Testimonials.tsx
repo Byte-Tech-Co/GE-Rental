@@ -14,7 +14,7 @@ export function Testimonials() {
     {
       name: "Ananya Sharma",
       location: "New Delhi",
-      text: "Rented a Royal Enfield for a solo trip to Cherrapunji. The bike didn't give me a single issue on those steep climbs. Highly recommend GE Rental for mountain trips!",
+      text: "Rented a Royal Enfield for a solo trip to Cherrapunji. The bike didn't give me a single issue on those steep climbs. Highly recommend GW Rental for mountain trips!",
       stars: 5,
     },
     {

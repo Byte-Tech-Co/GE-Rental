@@ -78,7 +78,7 @@ export function Footer() {
         {/* Bottom Row */}
         <div className="pt-8 border-t border-[var(--color-brand-white)]/10 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-[var(--color-brand-white)]/40 text-xs">
-            &copy; {currentYear} GE Rental Guwahati. All rights reserved.
+            &copy; {currentYear} GW Rental Guwahati. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
             <a href="#" className="text-[var(--color-brand-white)]/40 hover:text-[var(--color-amber)] text-xs transition-colors">Privacy Policy</a>

@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import { ArrowRight, Fuel, Users, Snowflake } from "lucide-react";
 
 export function FeaturedFleet() {
@@ -78,9 +79,9 @@ export function FeaturedFleet() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <button className="text-[var(--color-forest)] font-semibold flex items-center gap-2 hover:text-[var(--color-amber)] transition-colors group pb-2 border-b border-[var(--color-forest)] group-hover:border-[var(--color-amber)]">
+            <Link href="/vehicles" className="text-[var(--color-forest)] font-semibold flex items-center gap-2 hover:text-[var(--color-amber)] transition-colors group pb-2 border-b border-[var(--color-forest)] group-hover:border-[var(--color-amber)]">
               See all 40+ vehicles <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-            </button>
+            </Link>
           </motion.div>
         </div>
 

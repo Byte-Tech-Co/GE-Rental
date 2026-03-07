@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 export function Hero() {
@@ -97,15 +98,15 @@ export function Hero() {
               transition={{ duration: 0.8, delay: 0.8 }}
               className="flex flex-col sm:flex-row gap-4"
             >
-              <button className="relative bg-[var(--color-amber)] text-[var(--color-brand-white)] px-8 py-4 rounded-full font-semibold hover:shadow-[0_0_30px_rgba(212,136,58,0.5)] transition-all duration-300 transform hover:-translate-y-1 flex items-center justify-center gap-2 group overflow-hidden">
+              <Link href="/vehicles" className="relative bg-[var(--color-amber)] text-[var(--color-brand-white)] px-8 py-4 rounded-full font-semibold hover:shadow-[0_0_30px_rgba(212,136,58,0.5)] transition-all duration-300 transform hover:-translate-y-1 flex items-center justify-center gap-2 group overflow-hidden">
                 <span className="relative z-10 flex items-center gap-2">
-                  Browse Fleet <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+                  Explore the Fleet <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
                 </span>
                 <div className="absolute inset-0 bg-gradient-to-r from-[#b5722e] to-[var(--color-amber)] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              </button>
-              <button className="bg-[var(--color-brand-white)]/5 backdrop-blur-sm border border-[var(--color-brand-white)]/20 text-[var(--color-brand-white)] px-8 py-4 rounded-full font-semibold hover:bg-[var(--color-brand-white)]/10 hover:border-[var(--color-brand-white)]/40 transition-all duration-300 transform hover:-translate-y-1">
+              </Link>
+              <a href="#how-it-works" className="bg-[var(--color-brand-white)]/5 backdrop-blur-sm border border-[var(--color-brand-white)]/20 text-[var(--color-brand-white)] px-8 py-4 rounded-full font-semibold hover:bg-[var(--color-brand-white)]/10 hover:border-[var(--color-brand-white)]/40 transition-all duration-300 transform hover:-translate-y-1 block text-center">
                 How It Works
-              </button>
+              </a>
             </motion.div>
           </motion.div>
 
