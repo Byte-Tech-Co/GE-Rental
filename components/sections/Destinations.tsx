@@ -8,7 +8,7 @@ const destinations = [
   {
     name: "Kaziranga National Park",
     time: "3-4 hr drive",
-    image: "https://unsplash.com/photos/black-wooden-building-on-green-grass-field-under-white-sky-during-daytime-xz6BJTIvNWE",
+    image: "https://images.unsplash.com/photo-1466105350347-d5f1ad709010?q=80&w=1167&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     width: 80,
     height: 100,
     tall: true,
@@ -16,25 +16,25 @@ const destinations = [
   {
     name: "Shillong",
     time: "2 hr drive",
-    image: "https://images.unsplash.com/photo-1623150531506-6966f9166f21?auto=format&fit=crop&q=80&w=1000",
+    image: "https://images.unsplash.com/photo-1609276804051-8c5e906cc430?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     tall: false,
   },
   {
     name: "Cherrapunji",
     time: "4 hr drive",
-    image: "https://images.unsplash.com/photo-1601262973418-5a3b2bfa6701?auto=format&fit=crop&q=80&w=1000",
+    image: "https://images.unsplash.com/photo-1625654325562-762dcec9e6f2?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     tall: false,
   },
   {
     name: "Kamakhya Temple",
     time: "30 min drive",
-    image: "https://images.unsplash.com/photo-1603565816030-6b3a04a05f19?auto=format&fit=crop&q=80&w=1000",
+    image: "https://images.unsplash.com/photo-1594803205835-d121cb46e518?q=80&w=1153&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     tall: false,
   },
   {
     name: "Pobitora Wildlife",
     time: "1.5 hr drive",
-    image: "https://images.unsplash.com/photo-1662998634568-af97df146522?auto=format&fit=crop&q=80&w=1000",
+    image: "https://images.unsplash.com/photo-1661882759982-429eb2994c63?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     tall: false,
   },
 ];
