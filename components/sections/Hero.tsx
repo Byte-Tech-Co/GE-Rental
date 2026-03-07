@@ -76,7 +76,7 @@ export function Hero() {
             {/* Headline with gradient text */}
             <h1 className="text-5xl md:text-7xl lg:text-[88px] leading-[1.05] font-heading font-bold text-[var(--color-brand-white)] mb-6 tracking-tight">
               Your Ride.{" "}
-              <span className="bg-gradient-to-r from-[var(--color-red)] via-[#ff4d6d] to-[var(--color-red)] bg-clip-text text-transparent italic font-medium">
+              <span className="bg-gradient-to-r from-[var(--color-red)] via-[#ff4d6d] to-[var(--color-red)] bg-clip-text text-transparent  font-medium">
                 Your Rules.
               </span>
             </h1>
