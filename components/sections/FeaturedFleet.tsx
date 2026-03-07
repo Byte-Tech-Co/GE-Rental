@@ -33,7 +33,7 @@ export function FeaturedFleet() {
       name: "Honda Activa 6G",
       type: "Scooty",
       price: "300",
-      image: "https://images.unsplash.com/photo-1599813533804-0377a06f36ee?auto=format&fit=crop&q=80&w=400",
+      image: "/images/vehicles/activa-6g.png",
       status: "Booked",
       specs: [
         { icon: <Fuel size={12} />, text: "Petrol" },
@@ -44,7 +44,7 @@ export function FeaturedFleet() {
       name: "Toyota Innova Crysta",
       type: "SUV",
       price: "2,500",
-      image: "https://images.unsplash.com/photo-1503376713356-6510f27ddc5e?auto=format&fit=crop&q=80&w=400",
+      image: "/images/vehicles/toyota-innova.png",
       status: "Available",
       specs: [
         { icon: <Fuel size={12} />, text: "Diesel" },
