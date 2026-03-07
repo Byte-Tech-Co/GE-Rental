@@ -58,7 +58,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-            className="w-full max-w-3xl flex flex-col items-center"
+            className="w-full max-w-5xl flex flex-col items-center mt-24 md:mt-0"
           >
             {/* Eyebrow with glow pill */}
             <motion.div
@@ -75,7 +75,7 @@ export function Hero() {
 
             {/* Headline with gradient text */}
             <h1 className="text-5xl md:text-7xl lg:text-[88px] leading-[1.05] font-heading font-bold text-[var(--color-brand-white)] mb-6 tracking-tight">
-              Your Ride.<br />
+              Your Ride.{" "}
               <span className="bg-gradient-to-r from-[var(--color-amber)] via-[#e6a855] to-[var(--color-amber)] bg-clip-text text-transparent italic font-medium">
                 Your Rules.
               </span>
