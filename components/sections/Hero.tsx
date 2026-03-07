@@ -15,7 +15,7 @@ export function Hero() {
         className="absolute inset-0 z-0"
       >
         <Image
-          src="https://images.unsplash.com/photo-1542281286-9e0a16bb7366?auto=format&fit=crop&q=80&w=2940&ixlib=rb-4.0.3"
+          src="/images/hero.png"
           alt="Northeast India Landscape"
           fill
           className="object-cover object-center"

@@ -52,9 +52,9 @@ export function CTA() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="w-full lg:w-auto flex flex-col sm:flex-row items-center gap-4 bg-[var(--color-forest)]/40 p-6 md:p-8 rounded-2xl border border-[var(--color-brand-white)]/10 backdrop-blur-sm"
+            className="w-full lg:w-auto flex flex-col sm:flex-row items-center sm:items-start gap-4 bg-forest/40 p-6 md:p-8 rounded-2xl border border-brand-white/10 backdrop-blur-sm"
           >
-            <button className="w-full sm:w-auto bg-[var(--color-amber)] text-[var(--color-brand-white)] px-8 py-4 rounded-xl font-semibold hover:bg-[#b5722e] hover:shadow-[0_4px_20px_0_rgba(212,136,58,0.4)] transition-all transform hover:-translate-y-1 flex items-center justify-center gap-2 group whitespace-nowrap">
+            <button className="w-full sm:w-auto bg-(--color-amber) text-(--color-brand-white) px-8 py-4 rounded-xl font-semibold hover:bg-[#b5722e] hover:shadow-[0_4px_20px_0_rgba(212,136,58,0.4)] transition-all transform hover:-translate-y-1 flex items-center justify-center gap-2 group whitespace-nowrap">
               Explore the Fleet <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
             </button>
             <div className="flex flex-col items-center sm:items-start group cursor-pointer w-full sm:w-auto">
