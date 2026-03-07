@@ -1,101 +1,135 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 
 export function Hero() {
   return (
     <section className="relative w-full h-screen overflow-hidden flex items-center selection:bg-[var(--color-amber)] selection:text-white">
-      {/* Background Image with Zoom-out Animation */}
+      {/* Deep gradient background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-[#0d1a10] via-[#1a2e1e] to-[#0f1f14]"></div>
+
+      {/* Animated gradient orbs */}
       <motion.div
-        initial={{ scale: 1.1 }}
-        animate={{ scale: 1 }}
-        transition={{ duration: 10, ease: "easeOut" }}
-        className="absolute inset-0 z-0"
-      >
-        <Image
-          src="/images/hero.png"
-          alt="Northeast India Landscape"
-          fill
-          className="object-cover object-[75%_center] md:object-[center_center]"
-        />
-      </motion.div>
+        animate={{
+          scale: [1, 1.2, 1],
+          opacity: [0.3, 0.5, 0.3],
+        }}
+        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute top-[-20%] right-[-10%] w-[600px] h-[600px] rounded-full bg-[radial-gradient(circle,_rgba(212,136,58,0.25)_0%,_transparent_70%)] blur-3xl"
+      />
+      <motion.div
+        animate={{
+          scale: [1, 1.15, 1],
+          opacity: [0.2, 0.35, 0.2],
+        }}
+        transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+        className="absolute bottom-[-15%] left-[-5%] w-[500px] h-[500px] rounded-full bg-[radial-gradient(circle,_rgba(122,140,125,0.3)_0%,_transparent_70%)] blur-3xl"
+      />
+      <motion.div
+        animate={{
+          scale: [1, 1.3, 1],
+          opacity: [0.15, 0.25, 0.15],
+        }}
+        transition={{ duration: 12, repeat: Infinity, ease: "easeInOut", delay: 4 }}
+        className="absolute top-[30%] left-[40%] w-[400px] h-[400px] rounded-full bg-[radial-gradient(circle,_rgba(212,136,58,0.15)_0%,_transparent_70%)] blur-3xl"
+      />
+
+      {/* Subtle grid pattern */}
+      <div
+        className="absolute inset-0 opacity-[0.04] pointer-events-none"
+        style={{
+          backgroundImage: `linear-gradient(rgba(253,252,249,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(253,252,249,0.1) 1px, transparent 1px)`,
+          backgroundSize: "80px 80px",
+        }}
+      />
 
       {/* SVG Grain Overlay */}
-      <div className="absolute inset-0 z-10 opacity-[0.03] pointer-events-none" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E\")" }}></div>
+      <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E\")" }}></div>
 
-      {/* Dark overlay for mobile screens only to improve text visibility */}
-      <div className="absolute inset-0 z-10 bg-black/50 md:hidden"></div>
+      {/* Bottom gradient fade */}
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#0d1a10] to-transparent z-10"></div>
 
-      {/* Dark Forest Green Gradient Overlay on Left Half */}
-      <div className="hidden md:block absolute inset-0 z-10 bg-gradient-to-r from-[var(--color-forest)] via-[var(--color-forest)]/80 to-transparent"></div>
-      
-      {/* Dark overlay for bottom fading */}
-      <div className="hidden md:block absolute inset-0 z-10 bg-gradient-to-t from-[var(--color-forest)] via-transparent to-transparent opacity-50"></div>
-
-      <div className="container mx-auto px-6 md:px-12 relative z-20 h-full flex flex-col justify-center">
-        <div className="flex flex-col md:flex-row justify-between items-end h-[60%] mt-[10%]">
+      <div className="container mx-auto px-6 md:px-12 relative z-20 h-full flex flex-col items-center justify-center text-center">
           
-          {/* Left Side Content */}
+          {/* Center Content */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.2 }}
-            className="w-full md:w-[60%] flex flex-col items-start"
+            transition={{ duration: 1, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+            className="w-full max-w-3xl flex flex-col items-center"
           >
-            {/* Eyebrow */}
-            <div className="flex items-center gap-3 mb-6">
-              <span className="w-8 h-[2px] bg-[var(--color-amber)]"></span>
-              <span className="text-[var(--color-amber)] text-sm uppercase tracking-widest font-semibold font-sans">
-                Guwahati&apos;s Premier Rental
+            {/* Eyebrow with glow pill */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="inline-flex items-center gap-2 mb-8 px-4 py-2 rounded-full border border-[var(--color-amber)]/30 bg-[var(--color-amber)]/10 backdrop-blur-sm"
+            >
+              <span className="w-2 h-2 rounded-full bg-[var(--color-amber)] animate-pulse"></span>
+              <span className="text-[var(--color-amber)] text-xs uppercase tracking-widest font-semibold font-sans">
+                Guwahati&apos;s Premium Fleet
               </span>
-            </div>
+            </motion.div>
 
-            {/* Headline */}
-            <h1 className="text-5xl md:text-7xl lg:text-[80px] leading-[1.1] font-heading font-bold text-[var(--color-brand-white)] mb-6 tracking-tight">
-              The Northeast awaits.<br />
-              <span className="italic text-[var(--color-amber)] font-medium">Ride free.</span>
+            {/* Headline with gradient text */}
+            <h1 className="text-5xl md:text-7xl lg:text-[88px] leading-[1.05] font-heading font-bold text-[var(--color-brand-white)] mb-6 tracking-tight">
+              Your Ride.<br />
+              <span className="bg-gradient-to-r from-[var(--color-amber)] via-[#e6a855] to-[var(--color-amber)] bg-clip-text text-transparent italic font-medium">
+                Your Rules.
+              </span>
             </h1>
 
             {/* Subheading */}
-            <p className="text-lg md:text-xl text-[var(--color-brand-white)]/80 font-light max-w-lg mb-10 leading-relaxed font-sans">
-              From the rhino trails of Kaziranga to the mist-draped hills of Meghalaya — every great journey begins with the right set of wheels.
-            </p>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              className="text-lg md:text-xl text-[var(--color-brand-white)]/70 font-light max-w-xl mb-12 leading-relaxed font-sans"
+            >
+              Self-drive cars and bikes for every Northeast adventure. Pick up in Guwahati, explore Assam, Meghalaya, and beyond.
+            </motion.p>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4">
-              <button className="bg-[var(--color-amber)] text-[var(--color-brand-white)] px-8 py-4 rounded-full font-semibold hover:bg-[#b5722e] hover:shadow-[0_4px_20px_0_rgba(212,136,58,0.4)] transition-all transform hover:-translate-y-1 flex items-center justify-center gap-2 group">
-                Explore Fleet <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.8 }}
+              className="flex flex-col sm:flex-row gap-4"
+            >
+              <button className="relative bg-[var(--color-amber)] text-[var(--color-brand-white)] px-8 py-4 rounded-full font-semibold hover:shadow-[0_0_30px_rgba(212,136,58,0.5)] transition-all duration-300 transform hover:-translate-y-1 flex items-center justify-center gap-2 group overflow-hidden">
+                <span className="relative z-10 flex items-center gap-2">
+                  Browse Fleet <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+                </span>
+                <div className="absolute inset-0 bg-gradient-to-r from-[#b5722e] to-[var(--color-amber)] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </button>
-              <button className="bg-transparent border border-[var(--color-brand-white)]/30 text-[var(--color-brand-white)] px-8 py-4 rounded-full font-semibold hover:bg-[var(--color-brand-white)] hover:text-[var(--color-forest)] transition-all transform hover:-translate-y-1">
+              <button className="bg-[var(--color-brand-white)]/5 backdrop-blur-sm border border-[var(--color-brand-white)]/20 text-[var(--color-brand-white)] px-8 py-4 rounded-full font-semibold hover:bg-[var(--color-brand-white)]/10 hover:border-[var(--color-brand-white)]/40 transition-all duration-300 transform hover:-translate-y-1">
                 How It Works
               </button>
-            </div>
+            </motion.div>
           </motion.div>
 
-          {/* Right Side Stats */}
+          {/* Stats Row */}
           <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1, delay: 0.6 }}
-            className="hidden md:flex flex-col gap-10 border-l border-[var(--color-brand-white)]/10 text-right pr-6"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 1 }}
+            className="flex flex-wrap justify-center gap-8 md:gap-16 mt-20"
           >
-            <div className="flex flex-col items-end pl-8">
-              <span className="text-4xl lg:text-5xl font-heading font-bold text-[var(--color-brand-white)] mb-1">40+</span>
-              <span className="text-xs uppercase tracking-wider text-[var(--color-brand-white)]/60 font-sans">Vehicles in fleet</span>
-            </div>
-            <div className="flex flex-col items-end pl-8">
-              <span className="text-4xl lg:text-5xl font-heading font-bold text-[var(--color-brand-white)] mb-1">1200+</span>
-              <span className="text-xs uppercase tracking-wider text-[var(--color-brand-white)]/60 font-sans">Happy riders</span>
-            </div>
-            <div className="flex flex-col items-end pl-8">
-              <span className="text-4xl lg:text-5xl font-heading font-bold text-[var(--color-brand-white)] mb-1">6 yrs</span>
-              <span className="text-xs uppercase tracking-wider text-[var(--color-brand-white)]/60 font-sans">Trusted since 2018</span>
-            </div>
+            {[
+              { value: "40+", label: "Vehicles" },
+              { value: "1,200+", label: "Happy Riders" },
+              { value: "6 yrs", label: "Trusted Since 2018" },
+            ].map((stat, i) => (
+              <div key={stat.label} className="flex items-center gap-8 md:gap-16">
+                <div className="flex flex-col items-center">
+                  <span className="text-3xl lg:text-4xl font-heading font-bold text-[var(--color-brand-white)] mb-1">{stat.value}</span>
+                  <span className="text-xs uppercase tracking-wider text-[var(--color-brand-white)]/50 font-sans">{stat.label}</span>
+                </div>
+                {i < 2 && <div className="w-px h-10 bg-[var(--color-brand-white)]/10 hidden sm:block"></div>}
+              </div>
+            ))}
           </motion.div>
-        </div>
-
 
       </div>
     </section>
