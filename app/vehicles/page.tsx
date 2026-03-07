@@ -4,7 +4,7 @@ import { Footer } from "@/components/sections/Footer";
 import { VehiclePageClient } from "@/components/vehicles/VehiclePageClient";
 
 export const metadata = {
-  title: "Our Fleet | GE Rental",
+  title: "Our Fleet | GW Rental",
   description:
     "Browse our full fleet of cars, bikes, scooties & SUVs available for rent in Guwahati. Filter by category, price, and search by name.",
 };

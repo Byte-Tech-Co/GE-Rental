@@ -6,7 +6,7 @@ import { ArrowRight, MessageSquare } from "lucide-react";
 
 export function CTA() {
   return (
-    <section className="relative w-full bg-[var(--color-forest)] py-24 overflow-hidden border-y border-[var(--color-brand-white)]/10">
+    <section className="relative w-full bg-[#000000] py-24 overflow-hidden border-y border-[var(--color-brand-white)]/10">
       {/* Background Image & Overlays */}
       <div className="absolute inset-0 z-0 opacity-20 group">
         <Image
@@ -15,7 +15,7 @@ export function CTA() {
           fill
           className="object-cover grayscale mix-blend-overlay"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[var(--color-forest)] via-[var(--color-forest)]/90 to-[var(--color-forest)]/60"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-[#000000] via-[#000000]/90 to-[#000000]/60"></div>
       </div>
 
       <div className="container mx-auto px-6 md:px-12 relative z-10">
@@ -30,15 +30,15 @@ export function CTA() {
             className="w-full lg:w-1/2 text-left"
           >
             <div className="flex items-center gap-3 mb-4">
-              <span className="w-8 h-[2px] bg-[var(--color-amber)]"></span>
-              <span className="text-[var(--color-amber)] text-sm uppercase tracking-widest font-semibold font-sans">
+              <span className="w-8 h-[2px] bg-[var(--color-brand-white)]"></span>
+              <span className="text-[var(--color-brand-white)] text-sm uppercase tracking-widest font-semibold font-sans">
                 Your adventure starts here
               </span>
             </div>
             
             <h2 className="text-4xl md:text-6xl font-heading font-bold text-[var(--color-brand-white)] mb-6">
               The road is waiting.<br />
-              <span className="italic font-medium text-[var(--color-amber)]">Are you?</span>
+              <span className="italic font-medium text-[var(--color-red)]">Are you?</span>
             </h2>
             
             <p className="text-lg text-[var(--color-brand-white)]/80 leading-relaxed max-w-lg mb-0 font-light">
@@ -54,7 +54,7 @@ export function CTA() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="w-full lg:w-auto flex flex-col sm:flex-row items-center sm:items-start gap-4 bg-forest/40 p-6 md:p-8 rounded-2xl border border-brand-white/10 backdrop-blur-sm"
           >
-            <button className="w-full sm:w-auto bg-(--color-amber) text-(--color-brand-white) px-8 py-4 rounded-xl font-semibold hover:bg-[#b5722e] hover:shadow-[0_4px_20px_0_rgba(212,136,58,0.4)] transition-all transform hover:-translate-y-1 flex items-center justify-center gap-2 group whitespace-nowrap">
+            <button className="w-full sm:w-auto bg-[var(--color-forest)] text-[var(--color-brand-white)] px-8 py-4 rounded-xl font-semibold hover:bg-[#0a0a0a] hover:shadow-[0_4px_20px_0_rgba(15,15,15,0.4)] transition-all transform hover:-translate-y-1 flex items-center justify-center gap-2 group whitespace-nowrap">
               Explore the Fleet <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
             </button>
             <div className="flex flex-col items-center sm:items-start group cursor-pointer w-full sm:w-auto">

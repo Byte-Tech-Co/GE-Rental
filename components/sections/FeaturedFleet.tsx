@@ -79,7 +79,7 @@ export function FeaturedFleet() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <Link href="/vehicles" className="text-[var(--color-forest)] font-semibold flex items-center gap-2 hover:text-[var(--color-amber)] transition-colors group pb-2 border-b border-[var(--color-forest)] group-hover:border-[var(--color-amber)]">
+            <Link href="/vehicles" className="text-[var(--color-forest)] font-semibold flex items-center gap-2 hover:text-[var(--color-red)] transition-colors group pb-2 border-b border-[var(--color-forest)] group-hover:border-[var(--color-red)]">
               See all 40+ vehicles <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
             </Link>
           </motion.div>
@@ -94,7 +94,7 @@ export function FeaturedFleet() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: i * 0.1 }}
-              className="bg-[var(--color-brand-white)] rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-[#eae0d2] group flex flex-col"
+              className="bg-[var(--color-brand-white)] rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-[#e5e7eb] group flex flex-col"
             >
               {/* Image & Badges */}
               <div className="relative h-[180px] overflow-hidden bg-gray-100">
@@ -117,7 +117,7 @@ export function FeaturedFleet() {
 
               {/* Body */}
               <div className="p-5 flex flex-col flex-grow">
-                <span className="text-[var(--color-amber)] text-xs font-semibold uppercase tracking-wider mb-2">
+                <span className="text-[var(--color-red)] text-xs font-semibold uppercase tracking-wider mb-2">
                   {vehicle.type}
                 </span>
                 <h3 className="font-heading font-bold text-lg text-[var(--color-forest)] mb-4">
@@ -144,7 +144,7 @@ export function FeaturedFleet() {
                     disabled={vehicle.status === "Booked"}
                     className={`px-5 py-2 rounded-lg text-sm font-semibold transition-all ${
                       vehicle.status === "Available"
-                        ? "bg-[var(--color-amber)] text-[var(--color-brand-white)] hover:bg-[#b5722e] hover:shadow-md transform hover:-translate-y-0.5"
+                        ? "bg-[var(--color-red)] text-[var(--color-brand-white)] hover:bg-[#d90429] hover:shadow-md transform hover:-translate-y-0.5"
                         : "bg-gray-100 text-gray-400 cursor-not-allowed"
                     }`}
                   >

@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, X } from "lucide-react";
 
 export function Navbar() {
@@ -34,7 +35,14 @@ export function Navbar() {
     >
       <div className="container mx-auto px-6 md:px-12 flex justify-between items-center">
         {/* Logo */}
-        <Link href="/" className="group flex items-center gap-1 z-50">
+        <Link href="/" className="group flex items-center gap-2 z-50">
+          <Image
+            src="/logo-icon.png"
+            alt="GW Rental Logo"
+            width={40}
+            height={40}
+            className="w-10 h-10 object-contain"
+          />
           <span className="font-heading text-2xl font-bold tracking-tight text-[var(--color-brand-white)] uppercase group-hover:opacity-90 transition-opacity">
             GW Rental
           </span>
@@ -49,10 +57,10 @@ export function Navbar() {
               className="text-sm font-medium text-[var(--color-brand-white)]/90 hover:text-[var(--color-brand-white)] transition-colors relative group"
             >
               {link.name}
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[var(--color-amber)] transition-all duration-300 group-hover:w-full"></span>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[var(--color-red)] transition-all duration-300 group-hover:w-full"></span>
             </Link>
           ))}
-          <Link href="/vehicles" className="bg-[var(--color-amber)] text-[var(--color-brand-white)] px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-[#b5722e] hover:shadow-[0_4px_14px_0_rgba(212,136,58,0.39)] transition-all transform hover:-translate-y-0.5 ml-4">
+          <Link href="/vehicles" className="bg-[var(--color-red)] text-[var(--color-brand-white)] px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-[#d90429] hover:shadow-[0_4px_14px_0_rgba(239,35,60,0.39)] transition-all transform hover:-translate-y-0.5 ml-4">
             Book Now
           </Link>
         </nav>
@@ -77,13 +85,13 @@ export function Navbar() {
               <Link
                 key={link.name}
                 href={link.href}
-                className="text-2xl font-medium text-[var(--color-brand-white)] hover:text-[var(--color-amber)] transition-colors"
+                className="text-2xl font-medium text-[var(--color-brand-white)] hover:text-[var(--color-red)] transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {link.name}
               </Link>
             ))}
-            <Link href="/vehicles" className="bg-[var(--color-amber)] text-[var(--color-brand-white)] px-8 py-3 rounded-full text-lg font-semibold mt-4" onClick={() => setMobileMenuOpen(false)}>
+            <Link href="/vehicles" className="bg-[var(--color-red)] text-[var(--color-brand-white)] px-8 py-3 rounded-full text-lg font-semibold mt-4" onClick={() => setMobileMenuOpen(false)}>
               Book Now
             </Link>
           </motion.div>

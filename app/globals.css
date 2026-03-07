@@ -5,8 +5,8 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --color-forest: #1a2e1e;
-  --color-amber: #d4883a;
+  --color-forest: #000000;
+  --color-red: #ef233c;
   --color-cream: #f5f0e8;
   --color-brand-white: #fdfcf9;
   --color-brand-muted: #7a8c7d;
@@ -90,7 +90,7 @@
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
+  --background: #000000;
   --foreground: oklch(0.985 0 0);
   --card: oklch(0.205 0 0);
   --card-foreground: oklch(0.985 0 0);
@@ -140,9 +140,9 @@
   background: var(--color-forest);
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--color-amber);
+  background: var(--color-red);
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #b5722e;
+  background: #d90429;
 }

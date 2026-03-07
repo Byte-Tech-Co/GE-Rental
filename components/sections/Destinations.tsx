@@ -53,8 +53,8 @@ export function Destinations() {
             className="max-w-2xl"
           >
             <div className="flex items-center gap-3 mb-4">
-              <span className="w-8 h-[2px] bg-[var(--color-amber)]"></span>
-              <span className="text-[var(--color-amber)] text-sm uppercase tracking-widest font-semibold font-sans">
+              <span className="w-8 h-[2px] bg-[var(--color-red)]"></span>
+              <span className="text-[var(--color-red)] text-sm uppercase tracking-widest font-semibold font-sans">
                 Adventure awaits
               </span>
             </div>
@@ -71,7 +71,7 @@ export function Destinations() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <button className="text-[var(--color-forest)] font-semibold flex items-center gap-2 hover:text-[var(--color-amber)] transition-colors group">
+            <button className="text-[var(--color-forest)] font-semibold flex items-center gap-2 hover:text-[var(--color-red)] transition-colors group">
               View all routes <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
             </button>
           </motion.div>
@@ -104,7 +104,7 @@ export function Destinations() {
                 <h3 className={`font-heading font-bold text-[var(--color-brand-white)] mb-3 ${dest.tall ? 'text-3xl' : 'text-xl'}`}>
                   {dest.name}
                 </h3>
-                <div className="inline-flex items-center gap-1.5 bg-[var(--color-amber)]/90 backdrop-blur-sm px-3 py-1.5 rounded-full text-xs font-semibold text-[var(--color-brand-white)]">
+                <div className="inline-flex items-center gap-1.5 bg-[var(--color-red)]/90 backdrop-blur-sm px-3 py-1.5 rounded-full text-xs font-semibold text-[var(--color-brand-white)]">
                   <Clock size={12} />
                   <span>{dest.time}</span>
                 </div>

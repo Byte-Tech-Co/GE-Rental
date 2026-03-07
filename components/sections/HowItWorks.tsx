@@ -29,7 +29,7 @@ export function HowItWorks() {
   return (
     <section id="how-it-works" className="relative w-full bg-[var(--color-forest)] py-24 overflow-hidden">
       {/* Radial Amber Glow */}
-      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[var(--color-amber)] rounded-full blur-[150px] opacity-10 translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
+      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[var(--color-red)] rounded-full blur-[150px] opacity-10 translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
 
       <div className="container mx-auto px-6 md:px-12 relative z-10">
         <motion.div
@@ -40,9 +40,9 @@ export function HowItWorks() {
            className="text-center mb-20"
         >
           <div className="flex items-center justify-center gap-3 mb-4">
-            <span className="w-4 h-[2px] bg-[var(--color-amber)]"></span>
-            <span className="text-[var(--color-amber)] text-sm uppercase tracking-widest font-semibold font-sans">Simple Process</span>
-            <span className="w-4 h-[2px] bg-[var(--color-amber)]"></span>
+            <span className="w-4 h-[2px] bg-[var(--color-red)]"></span>
+            <span className="text-[var(--color-red)] text-sm uppercase tracking-widest font-semibold font-sans">Simple Process</span>
+            <span className="w-4 h-[2px] bg-[var(--color-red)]"></span>
           </div>
           <h2 className="text-4xl md:text-5xl font-heading font-bold text-[var(--color-brand-white)]">
             On the road in four easy steps
@@ -52,7 +52,7 @@ export function HowItWorks() {
         {/* Steps Layout */}
         <div className="relative">
           {/* Connecting Line */}
-          <div className="hidden md:block absolute top-[28px] left-[12%] right-[12%] h-[1px] bg-gradient-to-r from-[var(--color-amber)]/0 via-[var(--color-amber)]/30 to-[var(--color-amber)]/0 z-0"></div>
+          <div className="hidden md:block absolute top-[28px] left-[12%] right-[12%] h-[1px] bg-gradient-to-r from-[var(--color-red)]/0 via-[var(--color-red)]/30 to-[var(--color-red)]/0 z-0"></div>
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-6 relative z-10">
             {steps.map((step, index) => (
@@ -65,9 +65,9 @@ export function HowItWorks() {
                 className="flex flex-col items-center md:items-start text-center md:text-left"
               >
                 {/* Number Circle */}
-                <div className="w-14 h-14 rounded-full bg-[var(--color-forest)] border border-[var(--color-amber)]/40 flex items-center justify-center mb-6 shadow-[0_0_15px_rgba(212,136,58,0.15)] relative group">
-                  <div className="absolute inset-0 bg-[var(--color-amber)] rounded-full scale-0 group-hover:scale-100 transition-transform duration-300 ease-out opacity-20"></div>
-                  <span className="font-heading font-bold text-xl text-[var(--color-amber)]">
+                <div className="w-14 h-14 rounded-full bg-[var(--color-forest)] border border-[var(--color-red)]/40 flex items-center justify-center mb-6 shadow-[0_0_15px_rgba(239,35,60,0.15)] relative group">
+                  <div className="absolute inset-0 bg-[var(--color-red)] rounded-full scale-0 group-hover:scale-100 transition-transform duration-300 ease-out opacity-20"></div>
+                  <span className="font-heading font-bold text-xl text-[var(--color-red)]">
                     {step.num}
                   </span>
                 </div>

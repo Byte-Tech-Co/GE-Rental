@@ -74,8 +74,8 @@ export function VehiclePageClient() {
       <section className="relative pt-32 pb-16 md:pt-40 md:pb-20 bg-[var(--color-forest)] overflow-hidden">
         {/* Decorative elements */}
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-[var(--color-amber)] rounded-full blur-[120px]" />
-          <div className="absolute bottom-10 right-20 w-96 h-96 bg-[var(--color-amber)] rounded-full blur-[150px]" />
+          <div className="absolute top-20 left-10 w-72 h-72 bg-[var(--color-red)] rounded-full blur-[120px]" />
+          <div className="absolute bottom-10 right-20 w-96 h-96 bg-[var(--color-red)] rounded-full blur-[150px]" />
         </div>
 
         <div className="container mx-auto px-6 md:px-12 relative z-10">
@@ -117,7 +117,7 @@ export function VehiclePageClient() {
                 placeholder="Search by vehicle name…"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-12 pr-12 py-4 rounded-xl border border-[#e8e0d4] bg-white text-[var(--color-forest)] placeholder:text-[var(--color-brand-muted)]/60 focus:outline-none focus:ring-2 focus:ring-[var(--color-amber)]/40 focus:border-[var(--color-amber)] transition-all text-base shadow-sm font-sans"
+                className="w-full pl-12 pr-12 py-4 rounded-xl border border-[#e5e7eb] bg-white text-[var(--color-forest)] placeholder:text-[var(--color-brand-muted)]/60 focus:outline-none focus:ring-2 focus:ring-[var(--color-red)]/40 focus:border-[var(--color-red)] transition-all text-base shadow-sm font-sans"
               />
               {searchQuery && (
                 <button
@@ -184,7 +184,7 @@ export function VehiclePageClient() {
                   step={100}
                   value={maxPrice}
                   onChange={(e) => setMaxPrice(Number(e.target.value))}
-                  className="w-32 md:w-40 accent-[var(--color-amber)] cursor-pointer"
+                  className="w-32 md:w-40 accent-[var(--color-red)] cursor-pointer"
                 />
               </div>
 
@@ -192,7 +192,7 @@ export function VehiclePageClient() {
               {hasActiveFilters && (
                 <button
                   onClick={clearFilters}
-                  className="text-sm text-[var(--color-amber)] font-semibold hover:text-[#b5722e] transition-colors flex items-center gap-1"
+                  className="text-sm text-[var(--color-red)] font-semibold hover:text-[#d90429] transition-colors flex items-center gap-1"
                 >
                   <X size={14} /> Clear all
                 </button>
@@ -309,7 +309,7 @@ export function VehiclePageClient() {
                         disabled={vehicle.status === "Booked"}
                         className={`px-5 py-2.5 rounded-lg text-sm font-semibold transition-all duration-200 ${
                           vehicle.status === "Available"
-                            ? "bg-[var(--color-amber)] text-[var(--color-brand-white)] hover:bg-[#b5722e] hover:shadow-md transform hover:-translate-y-0.5"
+                            ? "bg-[var(--color-red)] text-[var(--color-brand-white)] hover:bg-[#d90429] hover:shadow-md transform hover:-translate-y-0.5"
                             : "bg-gray-100 text-gray-400 cursor-not-allowed"
                         }`}
                       >
@@ -340,7 +340,7 @@ export function VehiclePageClient() {
               </p>
               <button
                 onClick={clearFilters}
-                className="px-6 py-2.5 rounded-full bg-[var(--color-amber)] text-[var(--color-brand-white)] font-semibold text-sm hover:bg-[#b5722e] transition-colors"
+                className="px-6 py-2.5 rounded-full bg-[var(--color-red)] text-[var(--color-brand-white)] font-semibold text-sm hover:bg-[#d90429] transition-colors"
               >
                 Clear all filters
               </button>

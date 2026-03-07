@@ -51,14 +51,14 @@ export function Testimonials() {
               className="bg-[var(--color-cream)] p-8 md:p-10 rounded-2xl relative"
             >
               {/* Decorative Quote */}
-              <div className="absolute top-6 right-6 font-heading text-8xl text-[var(--color-amber)] opacity-10 leading-none select-none">
+              <div className="absolute top-6 right-6 font-heading text-8xl text-[var(--color-red)] opacity-10 leading-none select-none">
                 &quot;
               </div>
 
               {/* Stars */}
               <div className="flex items-center gap-1 mb-6 relative z-10">
                 {[...Array(review.stars)].map((_, index) => (
-                  <Star key={index} size={18} fill="currentColor" className="text-[var(--color-amber)]" />
+                  <Star key={index} size={18} fill="currentColor" className="text-[var(--color-red)]" />
                 ))}
               </div>
 

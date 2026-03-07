@@ -6,9 +6,9 @@ import { ArrowRight } from "lucide-react";
 
 export function Hero() {
   return (
-    <section className="relative w-full h-screen overflow-hidden flex items-center selection:bg-[var(--color-amber)] selection:text-white">
+    <section className="relative w-full h-screen overflow-hidden flex items-center selection:bg-[var(--color-red)] selection:text-white">
       {/* Deep gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#0d1a10] via-[#1a2e1e] to-[#0f1f14]"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-[#0a0a0a] via-[#000000] to-[#050505]"></div>
 
       {/* Animated gradient orbs */}
       <motion.div
@@ -17,7 +17,7 @@ export function Hero() {
           opacity: [0.3, 0.5, 0.3],
         }}
         transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute top-[-20%] right-[-10%] w-[600px] h-[600px] rounded-full bg-[radial-gradient(circle,_rgba(212,136,58,0.25)_0%,_transparent_70%)] blur-3xl"
+        className="absolute top-[-20%] right-[-10%] w-[600px] h-[600px] rounded-full bg-[radial-gradient(circle,_rgba(239,35,60,0.25)_0%,_transparent_70%)] blur-3xl"
       />
       <motion.div
         animate={{
@@ -33,7 +33,7 @@ export function Hero() {
           opacity: [0.15, 0.25, 0.15],
         }}
         transition={{ duration: 12, repeat: Infinity, ease: "easeInOut", delay: 4 }}
-        className="absolute top-[30%] left-[40%] w-[400px] h-[400px] rounded-full bg-[radial-gradient(circle,_rgba(212,136,58,0.15)_0%,_transparent_70%)] blur-3xl"
+        className="absolute top-[30%] left-[40%] w-[400px] h-[400px] rounded-full bg-[radial-gradient(circle,_rgba(239,35,60,0.15)_0%,_transparent_70%)] blur-3xl"
       />
 
       {/* Subtle grid pattern */}
@@ -49,7 +49,7 @@ export function Hero() {
       <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E\")" }}></div>
 
       {/* Bottom gradient fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#0d1a10] to-transparent z-10"></div>
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#0a0a0a] to-transparent z-10"></div>
 
       <div className="container mx-auto px-6 md:px-12 relative z-20 h-full flex flex-col items-center justify-center text-center">
           
@@ -65,10 +65,10 @@ export function Hero() {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="inline-flex items-center gap-2 mb-8 px-4 py-2 rounded-full border border-[var(--color-amber)]/30 bg-[var(--color-amber)]/10 backdrop-blur-sm"
+              className="inline-flex items-center gap-2 mb-8 px-4 py-2 rounded-full border border-[var(--color-red)]/30 bg-[var(--color-red)]/10 backdrop-blur-sm"
             >
-              <span className="w-2 h-2 rounded-full bg-[var(--color-amber)] animate-pulse"></span>
-              <span className="text-[var(--color-amber)] text-xs uppercase tracking-widest font-semibold font-sans">
+              <span className="w-2 h-2 rounded-full bg-[var(--color-red)] animate-pulse"></span>
+              <span className="text-[var(--color-red)] text-xs uppercase tracking-widest font-semibold font-sans">
                 Guwahati&apos;s Premium Fleet
               </span>
             </motion.div>
@@ -76,7 +76,7 @@ export function Hero() {
             {/* Headline with gradient text */}
             <h1 className="text-5xl md:text-7xl lg:text-[88px] leading-[1.05] font-heading font-bold text-[var(--color-brand-white)] mb-6 tracking-tight">
               Your Ride.{" "}
-              <span className="bg-gradient-to-r from-[var(--color-amber)] via-[#e6a855] to-[var(--color-amber)] bg-clip-text text-transparent italic font-medium">
+              <span className="bg-gradient-to-r from-[var(--color-red)] via-[#ff4d6d] to-[var(--color-red)] bg-clip-text text-transparent italic font-medium">
                 Your Rules.
               </span>
             </h1>
@@ -98,11 +98,11 @@ export function Hero() {
               transition={{ duration: 0.8, delay: 0.8 }}
               className="flex flex-col sm:flex-row gap-4"
             >
-              <Link href="/vehicles" className="relative bg-[var(--color-amber)] text-[var(--color-brand-white)] px-8 py-4 rounded-full font-semibold hover:shadow-[0_0_30px_rgba(212,136,58,0.5)] transition-all duration-300 transform hover:-translate-y-1 flex items-center justify-center gap-2 group overflow-hidden">
+              <Link href="/vehicles" className="relative bg-[var(--color-red)] text-[var(--color-brand-white)] px-8 py-4 rounded-full font-semibold hover:shadow-[0_0_30px_rgba(239,35,60,0.5)] transition-all duration-300 transform hover:-translate-y-1 flex items-center justify-center gap-2 group overflow-hidden">
                 <span className="relative z-10 flex items-center gap-2">
                   Explore the Fleet <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
                 </span>
-                <div className="absolute inset-0 bg-gradient-to-r from-[#b5722e] to-[var(--color-amber)] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-[#d90429] to-[var(--color-red)] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </Link>
               <a href="#how-it-works" className="bg-[var(--color-brand-white)]/5 backdrop-blur-sm border border-[var(--color-brand-white)]/20 text-[var(--color-brand-white)] px-8 py-4 rounded-full font-semibold hover:bg-[var(--color-brand-white)]/10 hover:border-[var(--color-brand-white)]/40 transition-all duration-300 transform hover:-translate-y-1 block text-center">
                 How It Works

@@ -129,7 +129,7 @@ export function Vehicles() {
                       <span className="text-sm font-medium"> / day</span>
                     </div>
                   </div>
-                  <Link href={`/vehicles?category=${cat.id}`} className="text-[var(--color-amber)] font-semibold flex items-center gap-1 hover:text-[#b5722e] transition-colors">
+                  <Link href={`/vehicles?category=${cat.id}`} className="text-[var(--color-red)] font-semibold flex items-center gap-1 hover:text-[#d90429] transition-colors">
                     Browse <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
                   </Link>
                 </div>
