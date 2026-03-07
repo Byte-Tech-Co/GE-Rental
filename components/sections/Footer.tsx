@@ -13,7 +13,7 @@ export function Footer() {
           {/* Brand Column */}
           <div className="flex flex-col">
             <span className="font-heading text-3xl font-bold tracking-tight text-[var(--color-brand-white)] uppercase mb-4">
-              GE Re<span className="text-[var(--color-amber)]">n</span>tal
+            GW Rental
             </span>
             <p className="text-[var(--color-brand-white)]/70 text-sm leading-relaxed mb-6 max-w-[280px]">
               Guwahati&apos;s premium vehicle rental service. Helping travelers conquer the hills and valleys of Northeast India since 2018.

@@ -36,7 +36,7 @@ export function Navbar() {
         {/* Logo */}
         <Link href="/" className="group flex items-center gap-1 z-50">
           <span className="font-heading text-2xl font-bold tracking-tight text-[var(--color-brand-white)] uppercase group-hover:opacity-90 transition-opacity">
-            GE Re<span className="text-[var(--color-amber)]">n</span>tal
+            GE Rental
           </span>
         </Link>
 

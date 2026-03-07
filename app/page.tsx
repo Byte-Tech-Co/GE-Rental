@@ -15,10 +15,10 @@ export default function Home() {
       <Navbar />
       <Hero />
       <TrustBar />
-      <Destinations />
       <Vehicles />
       <HowItWorks />
       <FeaturedFleet />
+      <Destinations />
       <Testimonials />
       <CTA />
       <Footer />
