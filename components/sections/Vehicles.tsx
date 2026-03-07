@@ -11,7 +11,7 @@ export function Vehicles() {
       title: "Comfortable sedans & SUVs",
       desc: "Perfect for family trips to Kaziranga or long intercity drives across Assam.",
       price: "1,200",
-      image: "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&q=80&w=800",
+      image: "/images/car.png",
       specs: [
         { icon: <Users size={14} />, text: "4-7 Seats" },
         { icon: <Fuel size={14} />, text: "Diesel/Petrol" },
@@ -24,7 +24,7 @@ export function Vehicles() {
       title: "Rugged motorcycles",
       desc: "Conquer the mountain roads to Shillong or cruise along the Brahmaputra.",
       price: "600",
-      image: "https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&q=80&w=800",
+      image: "/images/bike.png",
       specs: [
         { icon: <Users size={14} />, text: "2 Seats" },
         { icon: <Fuel size={14} />, text: "Petrol" },
@@ -36,7 +36,7 @@ export function Vehicles() {
       title: "Effortless city rides",
       desc: "Light and easy to park. The smartest way to explore Guwahati's ghats and markets.",
       price: "300",
-      image: "https://images.unsplash.com/photo-1599813533804-0377a06f36ee?auto=format&fit=crop&q=80&w=800",
+      image: "/images/scooty.png",
       specs: [
         { icon: <Users size={14} />, text: "2 Seats" },
         { icon: <Fuel size={14} />, text: "Petrol" },
