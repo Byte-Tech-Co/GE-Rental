@@ -18,18 +18,21 @@ export function Hero() {
           src="/images/hero.png"
           alt="Northeast India Landscape"
           fill
-          className="object-cover object-center"
+          className="object-cover object-[75%_center] md:object-[center_center]"
         />
       </motion.div>
 
       {/* SVG Grain Overlay */}
       <div className="absolute inset-0 z-10 opacity-[0.03] pointer-events-none" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E\")" }}></div>
 
+      {/* Dark overlay for mobile screens only to improve text visibility */}
+      <div className="absolute inset-0 z-10 bg-black/50 md:hidden"></div>
+
       {/* Dark Forest Green Gradient Overlay on Left Half */}
-      <div className="absolute inset-0 z-10 bg-gradient-to-r from-[var(--color-forest)] via-[var(--color-forest)]/80 to-transparent"></div>
+      <div className="hidden md:block absolute inset-0 z-10 bg-gradient-to-r from-[var(--color-forest)] via-[var(--color-forest)]/80 to-transparent"></div>
       
       {/* Dark overlay for bottom fading */}
-      <div className="absolute inset-0 z-10 bg-gradient-to-t from-[var(--color-forest)] via-transparent to-transparent opacity-50"></div>
+      <div className="hidden md:block absolute inset-0 z-10 bg-gradient-to-t from-[var(--color-forest)] via-transparent to-transparent opacity-50"></div>
 
       <div className="container mx-auto px-6 md:px-12 relative z-20 h-full flex flex-col justify-center">
         <div className="flex flex-col md:flex-row justify-between items-end h-[60%] mt-[10%]">
