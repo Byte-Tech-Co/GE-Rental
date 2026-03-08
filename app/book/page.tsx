@@ -197,7 +197,7 @@ export default function BookPage() {
                         }`}
                       >
                         <div className="relative w-24 h-20 rounded-lg overflow-hidden bg-[var(--color-cream)] shrink-0">
-                          <Image src={v.image} alt={v.name} fill className="object-cover" />
+                          <Image src={v.image} alt={v.name} fill sizes="96px" className="object-cover" />
                         </div>
                         <div className="min-w-0">
                           <p className="font-heading font-bold text-[var(--color-forest)]">{v.name}</p>
@@ -346,7 +346,7 @@ export default function BookPage() {
                     {selectedVehicle && (
                       <div className="p-6 flex gap-4 bg-[var(--color-cream)]/50">
                         <div className="relative w-32 h-24 rounded-xl overflow-hidden bg-[var(--color-cream)] shrink-0">
-                          <Image src={selectedVehicle.image} alt={selectedVehicle.name} fill className="object-cover" />
+                          <Image src={selectedVehicle.image} alt={selectedVehicle.name} fill sizes="128px" className="object-cover" />
                         </div>
                         <div>
                           <p className="font-heading font-bold text-lg text-[var(--color-forest)]">

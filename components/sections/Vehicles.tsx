@@ -86,6 +86,8 @@ export function Vehicles() {
                   src={cat.image}
                   alt={cat.title}
                   fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  priority={i < 3}
                   className="object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out"
                 />
                 {cat.badge && (

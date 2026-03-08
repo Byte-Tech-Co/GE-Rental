@@ -41,6 +41,7 @@ export function Navbar() {
             alt="GW Rental Logo"
             width={40}
             height={40}
+            priority
             className="w-10 h-10 object-contain"
           />
           <span className="font-heading text-2xl font-bold tracking-tight text-[var(--color-brand-white)] uppercase group-hover:opacity-90 transition-opacity">

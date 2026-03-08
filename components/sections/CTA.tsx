@@ -13,6 +13,8 @@ export function CTA() {
           src="https://images.unsplash.com/photo-1542281286-9e0a16bb7366?auto=format&fit=crop&q=80&w=2600"
           alt="CTA Background"
           fill
+          sizes="100vw"
+          quality={60}
           className="object-cover grayscale mix-blend-overlay"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-[#000000] via-[#000000]/90 to-[#000000]/60"></div>
