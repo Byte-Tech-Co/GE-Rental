@@ -13,6 +13,7 @@ export function Footer() {
           
           {/* Brand Column */}
           <div className="flex flex-col">
+            lkl
             <div className="flex items-center gap-2 mb-4">
               <Image src={"/logo.png"} width={30} height={30} alt="Logo" />
               <span className="text-xl font-bold text-[var(--color-brand-white)]">GW Rental</span>
