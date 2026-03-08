@@ -56,7 +56,7 @@ export function Footer() {
           <div>
             <h4 className="font-heading font-bold text-lg text-[var(--color-brand-white)] mb-6">Company</h4>
             <ul className="flex flex-col gap-3">
-              <li><a href="#" className="text-[var(--color-brand-white)]/70 hover:text-[var(--color-red)] transition-colors text-sm">About Us</a></li>
+              <li><a href="/about" className="text-[var(--color-brand-white)]/70 hover:text-[var(--color-red)] transition-colors text-sm">About Us</a></li>
               <li><a href="#" className="text-[var(--color-brand-white)]/70 hover:text-[var(--color-red)] transition-colors text-sm">How it Works</a></li>
               <li><a href="#" className="text-[var(--color-brand-white)]/70 hover:text-[var(--color-red)] transition-colors text-sm">Destinations</a></li>
               <li><a href="#" className="text-[var(--color-brand-white)]/70 hover:text-[var(--color-red)] transition-colors text-sm">FAQ & Support</a></li>
