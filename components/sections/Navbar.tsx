@@ -42,9 +42,9 @@ export function Navbar() {
             width={96}
             height={96}
             priority
-            className="w-24 h-24 object-contain"
+            className="w-16 h-16 md:w-24 md:h-24 object-contain"
           />
-          <span className="font-bold text-3xl text-[var(--color-brand-white)]">GW Rental</span>
+          <span className="font-bold text-xl md:text-3xl text-[var(--color-brand-white)]">GW Rental</span>
         </Link>
 
         {/* Desktop Nav */}
