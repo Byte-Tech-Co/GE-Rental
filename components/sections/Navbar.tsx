@@ -44,6 +44,7 @@ export function Navbar() {
             priority
             className="w-24 h-24 object-contain"
           />
+          <span className="font-bold text-3xl text-[var(--color-brand-white)]">GW Rental</span>
         </Link>
 
         {/* Desktop Nav */}

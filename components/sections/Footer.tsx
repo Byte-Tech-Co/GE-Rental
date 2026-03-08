@@ -14,16 +14,8 @@ export function Footer() {
           {/* Brand Column */}
           <div className="flex flex-col">
             <div className="flex items-center gap-2 mb-4">
-              <Image
-                src="/logo-icon.png"
-                alt="GW Rental Logo"
-                width={32}
-                height={32}
-                className="w-8 h-8 object-contain"
-              />
-              <span className="font-heading text-3xl font-bold tracking-tight text-[var(--color-brand-white)] uppercase">
-              GW Rental
-              </span>
+              <Image src={"/logo.png"} width={30} height={30} alt="Logo" />
+              <span className="text-xl font-bold text-[var(--color-brand-white)]">GW Rental</span>
             </div>            <p className="text-[var(--color-brand-white)]/70 text-sm leading-relaxed mb-6 max-w-[280px]">
               Guwahati&apos;s premium vehicle rental service. Helping travelers conquer the hills and valleys of Northeast India since 2018.
             </p>
