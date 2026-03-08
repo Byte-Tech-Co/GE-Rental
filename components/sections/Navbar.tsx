@@ -60,7 +60,7 @@ export function Navbar() {
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[var(--color-red)] transition-all duration-300 group-hover:w-full"></span>
             </Link>
           ))}
-          <Link href="/vehicles" className="bg-[var(--color-red)] text-[var(--color-brand-white)] px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-[#d90429] hover:shadow-[0_4px_14px_0_rgba(239,35,60,0.39)] transition-all transform hover:-translate-y-0.5 ml-4">
+          <Link href="/book" className="bg-[var(--color-red)] text-[var(--color-brand-white)] px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-[#d90429] hover:shadow-[0_4px_14px_0_rgba(239,35,60,0.39)] transition-all transform hover:-translate-y-0.5 ml-4">
             Book Now
           </Link>
         </nav>
@@ -91,7 +91,7 @@ export function Navbar() {
                 {link.name}
               </Link>
             ))}
-            <Link href="/vehicles" className="bg-[var(--color-red)] text-[var(--color-brand-white)] px-8 py-3 rounded-full text-lg font-semibold mt-4" onClick={() => setMobileMenuOpen(false)}>
+            <Link href="/book" className="bg-[var(--color-red)] text-[var(--color-brand-white)] px-8 py-3 rounded-full text-lg font-semibold mt-4" onClick={() => setMobileMenuOpen(false)}>
               Book Now
             </Link>
           </motion.div>

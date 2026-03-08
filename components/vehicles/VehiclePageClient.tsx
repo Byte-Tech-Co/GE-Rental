@@ -4,6 +4,7 @@ import { useState, useMemo, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import {
   Search,
   Fuel,
@@ -305,16 +306,18 @@ export function VehiclePageClient() {
                           <span className="text-sm font-medium"> / day</span>
                         </div>
                       </div>
-                      <button
-                        disabled={vehicle.status === "Booked"}
-                        className={`px-5 py-2.5 rounded-lg text-sm font-semibold transition-all duration-200 ${
-                          vehicle.status === "Available"
-                            ? "bg-[var(--color-red)] text-[var(--color-brand-white)] hover:bg-[#d90429] hover:shadow-md transform hover:-translate-y-0.5"
-                            : "bg-gray-100 text-gray-400 cursor-not-allowed"
-                        }`}
-                      >
-                        {vehicle.status === "Booked" ? "Unavailable" : "Book Now"}
-                      </button>
+                      {vehicle.status === "Available" ? (
+                        <Link
+                          href={`/book?vehicle=${vehicle.id}`}
+                          className="px-5 py-2.5 rounded-lg text-sm font-semibold transition-all duration-200 bg-[var(--color-red)] text-[var(--color-brand-white)] hover:bg-[#d90429] hover:shadow-md transform hover:-translate-y-0.5"
+                        >
+                          Book Now
+                        </Link>
+                      ) : (
+                        <span className="px-5 py-2.5 rounded-lg text-sm font-semibold bg-gray-100 text-gray-400 cursor-not-allowed">
+                          Unavailable
+                        </span>
+                      )}
                     </div>
                   </div>
                 </motion.div>
