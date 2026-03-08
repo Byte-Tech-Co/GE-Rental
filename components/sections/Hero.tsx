@@ -98,15 +98,15 @@ export function Hero() {
               transition={{ duration: 0.8, delay: 0.8 }}
               className="flex flex-col sm:flex-row gap-4"
             >
-              <Link href="/vehicles" className="relative bg-[var(--color-red)] text-[var(--color-brand-white)] px-8 py-4 rounded-full font-semibold hover:shadow-[0_0_30px_rgba(239,35,60,0.5)] transition-all duration-300 transform hover:-translate-y-1 flex items-center justify-center gap-2 group overflow-hidden">
+              <Link href="/book" className="relative bg-[var(--color-red)] text-[var(--color-brand-white)] px-8 py-4 rounded-full font-semibold hover:shadow-[0_0_30px_rgba(239,35,60,0.5)] transition-all duration-300 transform hover:-translate-y-1 flex items-center justify-center gap-2 group overflow-hidden">
                 <span className="relative z-10 flex items-center gap-2">
-                  Explore the Fleet <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+                  Book Now <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
                 </span>
                 <div className="absolute inset-0 bg-gradient-to-r from-[#d90429] to-[var(--color-red)] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </Link>
-              <a href="#how-it-works" className="bg-[var(--color-brand-white)]/5 backdrop-blur-sm border border-[var(--color-brand-white)]/20 text-[var(--color-brand-white)] px-8 py-4 rounded-full font-semibold hover:bg-[var(--color-brand-white)]/10 hover:border-[var(--color-brand-white)]/40 transition-all duration-300 transform hover:-translate-y-1 block text-center">
-                How It Works
-              </a>
+              <Link href="/vehicles" className="bg-[var(--color-brand-white)]/5 backdrop-blur-sm border border-[var(--color-brand-white)]/20 text-[var(--color-brand-white)] px-8 py-4 rounded-full font-semibold hover:bg-[var(--color-brand-white)]/10 hover:border-[var(--color-brand-white)]/40 transition-all duration-300 transform hover:-translate-y-1 block text-center">
+                Browse Fleets
+              </Link>
             </motion.div>
           </motion.div>
 

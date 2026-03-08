@@ -33,7 +33,8 @@ export function Navbar() {
           : "bg-transparent py-6"
       }`}
     >
-      <div className="container mx-auto px-6 md:px-12 flex justify-between items-center">
+      <div className="container mx-auto px-6 md:px-12 flex justify-between items-center relative">
+
         {/* Logo */}
         <Link href="/" className="group flex items-center gap-2 z-50">
           <Image
@@ -44,25 +45,29 @@ export function Navbar() {
             priority
             className="w-16 h-16 md:w-24 md:h-24 object-contain"
           />
-          <span className="font-bold text-xl md:text-3xl text-[var(--color-brand-white)]">GW Rental</span>
+          <span className="font-bold text-xl md:text-2xl text-[var(--color-brand-white)]">GW Rental</span>
         </Link>
 
-        {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-8">
+        {/* Desktop Nav - centered */}
+        <nav className="hidden md:flex items-center justify-center gap-10 absolute left-1/2 -translate-x-1/2">
           {navLinks.map((link) => (
             <Link
               key={link.name}
               href={link.href}
-              className="text-sm font-medium text-[var(--color-brand-white)]/90 hover:text-[var(--color-brand-white)] transition-colors relative group"
+              className="text-base font-medium text-[var(--color-brand-white)]/90 hover:text-[var(--color-brand-white)] transition-colors relative group"
             >
               {link.name}
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[var(--color-red)] transition-all duration-300 group-hover:w-full"></span>
             </Link>
           ))}
-          <Link href="/book" className="bg-[var(--color-red)] text-[var(--color-brand-white)] px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-[#d90429] hover:shadow-[0_4px_14px_0_rgba(239,35,60,0.39)] transition-all transform hover:-translate-y-0.5 ml-4">
+        </nav>
+
+        {/* Book Now Button - right side */}
+        <div className="hidden md:block">
+          <Link href="/book" className="bg-[var(--color-red)] text-[var(--color-brand-white)] px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-[#d90429] hover:shadow-[0_4px_14px_0_rgba(239,35,60,0.39)] transition-all transform hover:-translate-y-0.5">
             Book Now
           </Link>
-        </nav>
+        </div>
 
         {/* Mobile Menu Toggle */}
         <button
