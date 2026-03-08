@@ -60,6 +60,7 @@ export function Footer() {
               <li><a href="#" className="text-[var(--color-brand-white)]/70 hover:text-[var(--color-red)] transition-colors text-sm">How it Works</a></li>
               <li><a href="#" className="text-[var(--color-brand-white)]/70 hover:text-[var(--color-red)] transition-colors text-sm">Destinations</a></li>
               <li><a href="/faq" className="text-[var(--color-brand-white)]/70 hover:text-[var(--color-red)] transition-colors text-sm">FAQ & Support</a></li>
+              <li><a href="/contact" className="text-[var(--color-brand-white)]/70 hover:text-[var(--color-red)] transition-colors text-sm">Contact</a></li>
               <li><a href="#" className="text-[var(--color-brand-white)]/70 hover:text-[var(--color-red)] transition-colors text-sm">Become a Partner</a></li>
             </ul>
           </div>
