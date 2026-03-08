@@ -37,16 +37,13 @@ export function Navbar() {
         {/* Logo */}
         <Link href="/" className="group flex items-center gap-2 z-50">
           <Image
-            src="/logo-icon.png"
-            alt="GW Rental Logo"
-            width={40}
-            height={40}
+            src="/logo.png"
+            alt="GW Rental logo"
+            width={96}
+            height={96}
             priority
-            className="w-10 h-10 object-contain"
+            className="w-24 h-24 object-contain"
           />
-          <span className="font-heading text-2xl font-bold tracking-tight text-[var(--color-brand-white)] uppercase group-hover:opacity-90 transition-opacity">
-            GW Rental
-          </span>
         </Link>
 
         {/* Desktop Nav */}

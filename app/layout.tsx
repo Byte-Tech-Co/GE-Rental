@@ -1,21 +1,16 @@
 import type { Metadata } from "next";
-import { Space_Grotesk, Outfit } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 
-const spaceGrotesk = Space_Grotesk({
-  variable: "--font-space-grotesk",
+const poppins = Poppins({
+  variable: "--font-poppins",
   subsets: ["latin"],
-  display: "swap",
-});
-
-const outfit = Outfit({
-  variable: "--font-outfit",
-  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
   display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "GW Rental | Ride free in the Northeast",
+  title: "GW Rental | Bike and Car Rental in Guwahati",
   description: "Guwahati's Premier Rental. Cars, bikes, and scooties for your Northeast adventure.",
   icons: {
     icon: "/icon.png",
@@ -55,7 +50,7 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://images.unsplash.com" />
       </head>
       <body
-        className={`${outfit.variable} ${spaceGrotesk.variable} antialiased font-sans`}
+        className={`${poppins.variable} antialiased font-sans`}
       >
         {children}
       </body>
