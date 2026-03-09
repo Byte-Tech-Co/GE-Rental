@@ -1,14 +1,24 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 export function Hero() {
   return (
     <section className="relative w-full h-screen overflow-hidden flex items-center selection:bg-[var(--color-red)] selection:text-white">
-      {/* Deep gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#0a0a0a] via-[#000000] to-[#050505]"></div>
+      {/* Background Image */}
+      <Image
+        src="https://res.cloudinary.com/dhbjr5ujm/image/upload/v1773074247/ChatGPT_Image_Mar_9_2026_10_04_06_PM_1_waqvym.jpg"
+        alt="Hero background"
+        fill
+        className="object-cover"
+        priority
+      />
+
+      {/* Dark overlay for text readability */}
+      <div className="absolute inset-0 bg-gradient-to-br from-[#0a0a0a]/85 via-[#000000]/80 to-[#050505]/90"></div>
 
       {/* Animated gradient orbs */}
       <motion.div
