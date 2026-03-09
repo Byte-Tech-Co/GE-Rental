@@ -34,8 +34,8 @@ const contactInfo = [
   {
     icon: Mail,
     label: "Email Us",
-    value: "bookings@gerental.in",
-    href: "mailto:bookings@gerental.in",
+    value: "bookings@gwrental.in",
+    href: "mailto:bookings@gwrental.in",
   },
   {
     icon: Clock,

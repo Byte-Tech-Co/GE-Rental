@@ -68,7 +68,7 @@ export function Footer() {
               </p>
               <p>
                 <strong>Phone:</strong> +91 98765 43210<br />
-                <strong>Email:</strong> bookings@gerental.in
+                <strong>Email:</strong> bookings@gwrental.in
               </p>
               <p className="mt-2 text-[var(--color-red)]">
                 <strong>Mon - Sun:</strong> 7:00 AM - 9:00 PM

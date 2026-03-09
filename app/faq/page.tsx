@@ -150,10 +150,10 @@ export default function FaqPage() {
             <p className="text-lg text-[var(--color-brand-white)]/75 leading-relaxed">
               Everything you need to know about renting cars, bikes, and scooties from GW Rental. Can&apos;t find your answer? Reach out at{" "}
               <a
-                href="mailto:bookings@gerental.in"
+                href="mailto:bookings@gwrental.in"
                 className="text-[var(--color-red)] hover:underline"
               >
-                bookings@gerental.in
+bookings@gwrental.in
               </a>
               .
             </p>

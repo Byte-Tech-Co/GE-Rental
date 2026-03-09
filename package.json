@@ -1,5 +1,5 @@
 {
-  "name": "ge-rental",
+  "name": "gwrental",
   "version": "0.1.0",
   "private": true,
   "browserslist": ["defaults", "not dead", "not ie 11"],
