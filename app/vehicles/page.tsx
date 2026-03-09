@@ -11,7 +11,7 @@ export const metadata = {
 
 export default function VehiclesPage() {
   return (
-    <main className="min-h-screen bg-[var(--color-brand-white)]">
+    <main className="min-h-screen bg-(--color-brand-white)">
       <Navbar />
       <Suspense fallback={<div className="min-h-screen pt-32 flex items-center justify-center">Loading vehicles...</div>}>
         <VehiclePageClient />

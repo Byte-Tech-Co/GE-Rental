@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo, useEffect } from "react";
+import { useState, useMemo } from "react";
 import { useSearchParams } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
@@ -23,21 +23,20 @@ import {
 } from "@/lib/vehicles";
 
 export function VehiclePageClient() {
-  const [searchQuery, setSearchQuery] = useState("");
-  const [selectedCategories, setSelectedCategories] = useState<
-    Set<VehicleCategory>
-  >(new Set());
-  const [maxPrice, setMaxPrice] = useState(PRICE_MAX);
-  const [showFilters, setShowFilters] = useState(false);
-
   const searchParams = useSearchParams();
   const categoryQuery = searchParams.get("category") as VehicleCategory | null;
 
-  useEffect(() => {
-    if (categoryQuery && categories.includes(categoryQuery)) {
-      setSelectedCategories(new Set([categoryQuery]));
-    }
-  }, [categoryQuery]);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [selectedCategories, setSelectedCategories] = useState<
+    Set<VehicleCategory>
+  >(
+    () =>
+      categoryQuery && categories.includes(categoryQuery)
+        ? new Set([categoryQuery])
+        : new Set()
+  );
+  const [maxPrice, setMaxPrice] = useState(PRICE_MAX);
+  const [showFilters, setShowFilters] = useState(false);
 
   const toggleCategory = (cat: VehicleCategory) => {
     setSelectedCategories((prev) => {
