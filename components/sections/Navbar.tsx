@@ -40,10 +40,10 @@ export function Navbar() {
           <Image
             src="/logo.png"
             alt="GW Rental logo"
-            width={96}
-            height={96}
+            width={64}
+            height={64}
             priority
-            className="w-16 h-16 md:w-24 md:h-24 object-contain"
+            className="w-10 h-10 md:w-16 md:h-16 object-contain"
           />
           <span className="font-bold text-xl md:text-2xl text-[var(--color-brand-white)]">GW Rental</span>
         </Link>
