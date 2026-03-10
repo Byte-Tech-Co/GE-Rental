@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
@@ -66,15 +66,17 @@ export function Hero() {
           {/* Center Content */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.6 }}
+            transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
             className="w-full max-w-5xl flex flex-col items-center mt-24 md:mt-0"
           >
             {/* Eyebrow with glow pill */}
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true, amount: 0.6 }}
+              transition={{ duration: 0.6, delay: 0.15 }}
               className="inline-flex items-center gap-2 mb-8 px-4 py-2 rounded-full border border-[var(--color-red)]/30 bg-[var(--color-red)]/10 backdrop-blur-sm"
             >
               <span className="w-2 h-2 rounded-full bg-[var(--color-red)] animate-pulse"></span>
@@ -94,8 +96,9 @@ export function Hero() {
             {/* Subheading */}
             <motion.p
               initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.7 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
               className="text-lg md:text-xl text-[var(--color-brand-white)]/70 font-light max-w-xl mb-12 leading-relaxed font-sans"
             >
               Self-drive cars and bikes for every Northeast adventure. Pick up in Guwahati, explore Assam, Meghalaya, and beyond.
@@ -104,8 +107,9 @@ export function Hero() {
             {/* CTA Buttons */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.8 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.75 }}
+              transition={{ duration: 0.6, delay: 0.45 }}
               className="flex flex-col sm:flex-row gap-4"
             >
               <Link href="/book" className="relative bg-[var(--color-red)] text-[var(--color-brand-white)] px-8 py-4 rounded-full font-semibold hover:shadow-[0_0_30px_rgba(239,35,60,0.5)] transition-all duration-300 transform hover:-translate-y-1 flex items-center justify-center gap-2 group overflow-hidden">
@@ -123,8 +127,9 @@ export function Hero() {
           {/* Stats Row */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 1 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.4 }}
+            transition={{ duration: 0.7 }}
             className="flex flex-wrap justify-center gap-8 md:gap-16 mt-20"
           >
             {[
@@ -132,13 +137,26 @@ export function Hero() {
               { value: "1,200+", label: "Happy Riders" },
               { value: "6 yrs", label: "Trusted Since 2018" },
             ].map((stat, i) => (
-              <div key={stat.label} className="flex items-center gap-8 md:gap-16">
+              <motion.div
+                key={stat.label}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.4 }}
+                transition={{ duration: 0.6, delay: 0.2 + i * 0.15 }}
+                className="flex items-center gap-8 md:gap-16"
+              >
                 <div className="flex flex-col items-center">
-                  <span className="text-3xl lg:text-4xl font-heading font-bold text-[var(--color-brand-white)] mb-1">{stat.value}</span>
-                  <span className="text-xs uppercase tracking-wider text-[var(--color-brand-white)]/50 font-sans">{stat.label}</span>
+                  <span className="text-3xl lg:text-4xl font-heading font-bold text-[var(--color-brand-white)] mb-1">
+                    {stat.value}
+                  </span>
+                  <span className="text-xs uppercase tracking-wider text-[var(--color-brand-white)]/50 font-sans">
+                    {stat.label}
+                  </span>
                 </div>
-                {i < 2 && <div className="w-px h-10 bg-[var(--color-brand-white)]/10 hidden sm:block"></div>}
-              </div>
+                {i < 2 && (
+                  <div className="w-px h-10 bg-[var(--color-brand-white)]/10 hidden sm:block"></div>
+                )}
+              </motion.div>
             ))}
           </motion.div>
 

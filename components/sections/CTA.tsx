@@ -1,12 +1,12 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import Image from "next/image";
 import { ArrowRight, MessageSquare } from "lucide-react";
 
 export function CTA() {
   return (
-    <section className="relative w-full bg-[#000000] py-24 overflow-hidden border-y border-[var(--color-brand-white)]/10">
+    <section className="relative w-full bg-[#000000] py-24 overflow-hidden border-y border-brand-white/10">
       {/* Background Image & Overlays */}
       <div className="absolute inset-0 z-0 opacity-20 group">
         <Image

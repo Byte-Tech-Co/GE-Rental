@@ -2,7 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   experimental: {
-    optimizePackageImports: ["framer-motion", "@base-ui/react"],
+    optimizePackageImports: ["motion/react", "@base-ui/react"],
   },
   images: {
     formats: ["image/avif", "image/webp"],
