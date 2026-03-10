@@ -2,7 +2,11 @@ import dynamic from "next/dynamic";
 import { Navbar } from "@/components/sections/Navbar";
 import { Hero } from "@/components/sections/Hero";
 import { TrustBar } from "@/components/sections/TrustBar";
-import { Vehicles } from "@/components/sections/Vehicles";
+// import { Vehicles } from "@/components/sections/Vehicles";
+
+const Vehicles = dynamic(() =>
+  import("@/components/sections/Vehicles").then((m) => ({ default: m.Vehicles }))
+);
 
 const HowItWorks = dynamic(() =>
   import("@/components/sections/HowItWorks").then((m) => ({ default: m.HowItWorks }))

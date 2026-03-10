@@ -3,27 +3,28 @@
 import { motion } from "motion/react";
 import { Star } from "lucide-react";
 
+const reviews = [
+  {
+    name: "Rohan Deka",
+    location: "Guwahati, Assam",
+    text: "The Innova was in pristine condition. Comfortable for our entire family trip to Tawang. Driver was polite and the booking process via WhatsApp was incredibly smooth.",
+    stars: 5,
+  },
+  {
+    name: "Ananya Sharma",
+    location: "New Delhi",
+    text: "Rented a Royal Enfield for a solo trip to Cherrapunji. The bike didn't give me a single issue on those steep climbs. Highly recommend GW Rental for mountain trips!",
+    stars: 5,
+  },
+  {
+    name: "David Lalrin",
+    location: "Shillong, Meghalaya",
+    text: "Picked up a Swift Dzire for the weekend. The handover near Paltan Bazaar was quick, no hidden charges. Very transparent and professional rental service.",
+    stars: 5,
+  },
+];
+
 export function Testimonials() {
-  const reviews = [
-    {
-      name: "Rohan Deka",
-      location: "Guwahati, Assam",
-      text: "The Innova was in pristine condition. Comfortable for our entire family trip to Tawang. Driver was polite and the booking process via WhatsApp was incredibly smooth.",
-      stars: 5,
-    },
-    {
-      name: "Ananya Sharma",
-      location: "New Delhi",
-      text: "Rented a Royal Enfield for a solo trip to Cherrapunji. The bike didn't give me a single issue on those steep climbs. Highly recommend GW Rental for mountain trips!",
-      stars: 5,
-    },
-    {
-      name: "David Lalrin",
-      location: "Shillong, Meghalaya",
-      text: "Picked up a Swift Dzire for the weekend. The handover near Paltan Bazaar was quick, no hidden charges. Very transparent and professional rental service.",
-      stars: 5,
-    },
-  ];
 
   return (
     <section className="w-full bg-[var(--color-brand-white)] py-24">

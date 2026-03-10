@@ -5,55 +5,56 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Fuel, Users, Snowflake } from "lucide-react";
 
+const fleet = [
+  {
+    name: "Maruti Swift Dzire",
+    type: "Sedan",
+    price: "1,200",
+    image: "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&q=80&w=400",
+    status: "Available",
+    specs: [
+      { icon: <Fuel size={12} />, text: "Petrol" },
+      { icon: <Users size={12} />, text: "5 Seats" },
+      { icon: <Snowflake size={12} />, text: "AC" },
+    ],
+  },
+  {
+    name: "Royal Enfield Classic 350",
+    type: "Bike",
+    price: "650",
+    image: "https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&q=80&w=400",
+    status: "Available",
+    specs: [
+      { icon: <Fuel size={12} />, text: "Petrol" },
+      { icon: <Users size={12} />, text: "2 Seats" },
+    ],
+  },
+  {
+    name: "Honda Activa 6G",
+    type: "Scooty",
+    price: "300",
+    image: "/images/vehicles/activa-6g.png",
+    status: "Booked",
+    specs: [
+      { icon: <Fuel size={12} />, text: "Petrol" },
+      { icon: <Users size={12} />, text: "2 Seats" },
+    ],
+  },
+  {
+    name: "Toyota Innova Crysta",
+    type: "SUV",
+    price: "2,500",
+    image: "/images/vehicles/toyota-innova.png",
+    status: "Available",
+    specs: [
+      { icon: <Fuel size={12} />, text: "Diesel" },
+      { icon: <Users size={12} />, text: "7 Seats" },
+      { icon: <Snowflake size={12} />, text: "AC" },
+    ],
+  },
+];
+
 export function FeaturedFleet() {
-  const fleet = [
-    {
-      name: "Maruti Swift Dzire",
-      type: "Sedan",
-      price: "1,200",
-      image: "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&q=80&w=400",
-      status: "Available",
-      specs: [
-        { icon: <Fuel size={12} />, text: "Petrol" },
-        { icon: <Users size={12} />, text: "5 Seats" },
-        { icon: <Snowflake size={12} />, text: "AC" },
-      ],
-    },
-    {
-      name: "Royal Enfield Classic 350",
-      type: "Bike",
-      price: "650",
-      image: "https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&q=80&w=400",
-      status: "Available",
-      specs: [
-        { icon: <Fuel size={12} />, text: "Petrol" },
-        { icon: <Users size={12} />, text: "2 Seats" },
-      ],
-    },
-    {
-      name: "Honda Activa 6G",
-      type: "Scooty",
-      price: "300",
-      image: "/images/vehicles/activa-6g.png",
-      status: "Booked",
-      specs: [
-        { icon: <Fuel size={12} />, text: "Petrol" },
-        { icon: <Users size={12} />, text: "2 Seats" },
-      ],
-    },
-    {
-      name: "Toyota Innova Crysta",
-      type: "SUV",
-      price: "2,500",
-      image: "/images/vehicles/toyota-innova.png",
-      status: "Available",
-      specs: [
-        { icon: <Fuel size={12} />, text: "Diesel" },
-        { icon: <Users size={12} />, text: "7 Seats" },
-        { icon: <Snowflake size={12} />, text: "AC" },
-      ],
-    },
-  ];
 
   return (
     <section className="w-full bg-[var(--color-cream)] py-24">

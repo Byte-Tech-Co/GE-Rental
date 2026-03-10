@@ -5,49 +5,50 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Users, Fuel, Mountain, MapPin } from "lucide-react";
 
+const categories = [
+  {
+    id: "Car",
+    type: "Cars",
+    title: "Comfortable sedans & SUVs",
+    desc: "Perfect for family trips to Kaziranga or long intercity drives across Assam.",
+    price: "1,200",
+    image: "/images/car.png",
+    specs: [
+      { icon: <Users size={14} />, text: "4-7 Seats" },
+      { icon: <Fuel size={14} />, text: "Diesel/Petrol" },
+      { icon: <Mountain size={14} />, text: "Highway & Off-road" },
+    ],
+    badge: "Most Popular",
+  },
+  {
+    id: "Bike",
+    type: "Bikes",
+    title: "Rugged motorcycles",
+    desc: "Conquer the mountain roads to Shillong or cruise along the Brahmaputra.",
+    price: "600",
+    image: "/images/bike.png",
+    specs: [
+      { icon: <Users size={14} />, text: "2 Seats" },
+      { icon: <Fuel size={14} />, text: "Petrol" },
+      { icon: <Mountain size={14} />, text: "Mountain Terrain" },
+    ],
+  },
+  {
+    id: "Scooty",
+    type: "Scooties",
+    title: "Effortless city rides",
+    desc: "Light and easy to park. The smartest way to explore Guwahati's ghats and markets.",
+    price: "300",
+    image: "/images/scooty.png",
+    specs: [
+      { icon: <Users size={14} />, text: "2 Seats" },
+      { icon: <Fuel size={14} />, text: "Petrol" },
+      { icon: <MapPin size={14} />, text: "City Exploring" },
+    ],
+  },
+];
+
 export function Vehicles() {
-  const categories = [
-    {
-      id: "Car",
-      type: "Cars",
-      title: "Comfortable sedans & SUVs",
-      desc: "Perfect for family trips to Kaziranga or long intercity drives across Assam.",
-      price: "1,200",
-      image: "/images/car.png",
-      specs: [
-        { icon: <Users size={14} />, text: "4-7 Seats" },
-        { icon: <Fuel size={14} />, text: "Diesel/Petrol" },
-        { icon: <Mountain size={14} />, text: "Highway & Off-road" },
-      ],
-      badge: "Most Popular",
-    },
-    {
-      id: "Bike",
-      type: "Bikes",
-      title: "Rugged motorcycles",
-      desc: "Conquer the mountain roads to Shillong or cruise along the Brahmaputra.",
-      price: "600",
-      image: "/images/bike.png",
-      specs: [
-        { icon: <Users size={14} />, text: "2 Seats" },
-        { icon: <Fuel size={14} />, text: "Petrol" },
-        { icon: <Mountain size={14} />, text: "Mountain Terrain" },
-      ],
-    },
-    {
-      id: "Scooty",
-      type: "Scooties",
-      title: "Effortless city rides",
-      desc: "Light and easy to park. The smartest way to explore Guwahati's ghats and markets.",
-      price: "300",
-      image: "/images/scooty.png",
-      specs: [
-        { icon: <Users size={14} />, text: "2 Seats" },
-        { icon: <Fuel size={14} />, text: "Petrol" },
-        { icon: <MapPin size={14} />, text: "City Exploring" },
-      ],
-    },
-  ];
 
   return (
     <section id="vehicles" className="w-full bg-[var(--color-brand-white)] py-24">
@@ -61,10 +62,10 @@ export function Vehicles() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-4xl md:text-5xl font-heading font-bold text-[var(--color-forest)] mb-4">
-              Pick your perfect ride for the road
+              Built for the Journey
             </h2>
             <p className="text-[var(--color-brand-muted)] text-lg">
-              Whether you&apos;re conquering mountain passes or cruising city streets, we have a meticulously maintained vehicle waiting for you.
+              Our fleet is meticulously curated and maintained for the unique terrains of Northeast India.
             </p>
           </motion.div>
         </div>
@@ -90,11 +91,11 @@ export function Vehicles() {
                   priority={i < 3}
                   className="object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out"
                 />
-                {cat.badge && (
+                {cat.badge ? (
                   <div className="absolute top-4 left-4 bg-[var(--color-forest)] text-white text-xs font-semibold px-3 py-1.5 rounded-full z-10">
                     {cat.badge}
                   </div>
-                )}
+                ) : null}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
 

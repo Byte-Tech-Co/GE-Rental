@@ -59,10 +59,10 @@ export function Destinations() {
               </span>
             </div>
             <h2 className="text-4xl md:text-5xl font-heading font-bold text-[var(--color-forest)] mb-6">
-              Where will your journey take you?
+              The Northeast is Your Playground
             </h2>
             <p className="text-lg text-[var(--color-brand-muted)] leading-relaxed">
-              Northeast India is breathtaking. From ancient temples to the wettest places on earth, discover the hidden gems of Assam and Meghalaya at your own pace.
+              Experience the breathtaking beauty of Northeast India. From ancient temples to the wettest places on earth, discover the hidden gems of Assam and Meghalaya at your own pace.
             </p>
           </motion.div>
           <motion.div

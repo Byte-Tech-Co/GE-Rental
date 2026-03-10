@@ -5,6 +5,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
+const stats = [
+  { value: "40+", label: "Vehicles" },
+  { value: "1,200+", label: "Happy Riders" },
+  { value: "6 yrs", label: "Trusted Since 2018" },
+];
+
 export function Hero() {
   return (
     <section className="relative w-full h-screen overflow-hidden flex items-center selection:bg-[var(--color-red)] selection:text-white">
@@ -87,9 +93,9 @@ export function Hero() {
 
             {/* Headline with gradient text */}
             <h1 className="text-5xl md:text-7xl lg:text-[88px] leading-[1.05] font-heading font-bold text-[var(--color-brand-white)] mb-6 tracking-tight">
-              Your Ride.{" "}
+              Explore the Northeast{" "}
               <span className="bg-gradient-to-r from-[var(--color-red)] via-[#ff4d6d] to-[var(--color-red)] bg-clip-text text-transparent  font-medium">
-                Your Rules.
+                on Your Own Terms
               </span>
             </h1>
 
@@ -101,7 +107,7 @@ export function Hero() {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="text-lg md:text-xl text-[var(--color-brand-white)]/70 font-light max-w-xl mb-12 leading-relaxed font-sans"
             >
-              Self-drive cars and bikes for every Northeast adventure. Pick up in Guwahati, explore Assam, Meghalaya, and beyond.
+                From the plains of Assam to the clouds of Meghalaya—experience the freedom of self-drive without schedules or drivers.
             </motion.p>
 
             {/* CTA Buttons */}
@@ -114,7 +120,7 @@ export function Hero() {
             >
               <Link href="/book" className="relative bg-[var(--color-red)] text-[var(--color-brand-white)] px-8 py-4 rounded-full font-semibold hover:shadow-[0_0_30px_rgba(239,35,60,0.5)] transition-all duration-300 transform hover:-translate-y-1 flex items-center justify-center gap-2 group overflow-hidden">
                 <span className="relative z-10 flex items-center gap-2">
-                  Book Now <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+                  Book My Adventure <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
                 </span>
                 <div className="absolute inset-0 bg-gradient-to-r from-[#d90429] to-[var(--color-red)] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </Link>
@@ -132,11 +138,7 @@ export function Hero() {
             transition={{ duration: 0.7 }}
             className="flex flex-wrap justify-center gap-8 md:gap-16 mt-20"
           >
-            {[
-              { value: "40+", label: "Vehicles" },
-              { value: "1,200+", label: "Happy Riders" },
-              { value: "6 yrs", label: "Trusted Since 2018" },
-            ].map((stat, i) => (
+            {stats.map((stat, i) => (
               <motion.div
                 key={stat.label}
                 initial={{ opacity: 0, y: 20 }}

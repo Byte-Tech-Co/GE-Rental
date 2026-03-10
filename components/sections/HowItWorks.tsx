@@ -2,29 +2,30 @@
 
 import { motion } from "motion/react";
 
+const steps = [
+  {
+    num: "01",
+    title: "Find Your Perfect Explorer",
+    desc: "Explore our collection of fully maintained cars, bikes, and scooties. Find the perfect match for your terrain and budget.",
+  },
+  {
+    num: "02",
+    title: "Set Your Own Pace",
+    desc: "Select your pickup and drop-off times. We offer flexible daily, weekly, and monthly rates for all our vehicles.",
+  },
+  {
+    num: "03",
+    title: "Confirm & Hit the Road",
+    desc: "Complete your booking with a quick KYC check and secure online payment. No hidden fees or surprise charges.",
+  },
+  {
+    num: "04",
+    title: "Return with Memories",
+    desc: "Pick up your ride from Guwahati city center and start your adventure. Return it hassle-free when you're done.",
+  },
+];
+
 export function HowItWorks() {
-  const steps = [
-    {
-      num: "01",
-      title: "Browse the Fleet",
-      desc: "Explore our collection of fully maintained cars, bikes, and scooties. Find the perfect match for your terrain and budget.",
-    },
-    {
-      num: "02",
-      title: "Pick Your Dates",
-      desc: "Select your pickup and drop-off times. We offer flexible daily, weekly, and monthly rates for all our vehicles.",
-    },
-    {
-      num: "03",
-      title: "Confirm & Pay",
-      desc: "Complete your booking with a quick KYC check and secure online payment. No hidden fees or surprise charges.",
-    },
-    {
-      num: "04",
-      title: "Ride & Return",
-      desc: "Pick up your ride from Guwahati city center and start your adventure. Return it hassle-free when you're done.",
-    },
-  ];
 
   return (
     <section id="how-it-works" className="relative w-full bg-[var(--color-forest)] py-24 overflow-hidden">
@@ -45,7 +46,7 @@ export function HowItWorks() {
             <span className="w-4 h-[2px] bg-[var(--color-red)]"></span>
           </div>
           <h2 className="text-4xl md:text-5xl font-heading font-bold text-[var(--color-brand-white)]">
-            On the road in four easy steps
+            Explore more in four easy steps
           </h2>
         </motion.div>
 
