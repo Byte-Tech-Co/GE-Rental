@@ -88,7 +88,7 @@ export function VehiclePageClient() {
             <h1 className="text-4xl md:text-6xl font-heading font-bold text-[var(--color-brand-white)] mb-4">
               Our Fleet
             </h1>
-            <p className="text-[var(--color-brand-white)]/70 text-lg md:text-xl">
+            <p className="text-brand-white/70 text-lg md:text-xl">
               Browse our full collection of meticulously maintained vehicles.
               Find the perfect ride for your Northeast adventure.
             </p>

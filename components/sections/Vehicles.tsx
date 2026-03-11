@@ -12,7 +12,7 @@ const categories = [
     title: "Comfortable sedans & SUVs",
     desc: "Perfect for family trips to Kaziranga or long intercity drives across Assam.",
     price: "1,200",
-    image: "/images/car.png",
+    image: "/images/car.webp",
     specs: [
       { icon: <Users size={14} />, text: "4-7 Seats" },
       { icon: <Fuel size={14} />, text: "Diesel/Petrol" },
@@ -26,7 +26,7 @@ const categories = [
     title: "Rugged motorcycles",
     desc: "Conquer the mountain roads to Shillong or cruise along the Brahmaputra.",
     price: "600",
-    image: "/images/bike.png",
+    image: "/images/bike.webp",
     specs: [
       { icon: <Users size={14} />, text: "2 Seats" },
       { icon: <Fuel size={14} />, text: "Petrol" },
@@ -39,7 +39,7 @@ const categories = [
     title: "Effortless city rides",
     desc: "Light and easy to park. The smartest way to explore Guwahati's ghats and markets.",
     price: "300",
-    image: "/images/scooty.png",
+    image: "/images/scooty.webp",
     specs: [
       { icon: <Users size={14} />, text: "2 Seats" },
       { icon: <Fuel size={14} />, text: "Petrol" },

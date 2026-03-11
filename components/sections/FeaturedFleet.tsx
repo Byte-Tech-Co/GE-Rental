@@ -33,7 +33,7 @@ const fleet = [
     name: "Honda Activa 6G",
     type: "Scooty",
     price: "300",
-    image: "/images/vehicles/activa-6g.png",
+    image: "/images/vehicles/activa-6g.webp",
     status: "Booked",
     specs: [
       { icon: <Fuel size={12} />, text: "Petrol" },
@@ -44,7 +44,7 @@ const fleet = [
     name: "Toyota Innova Crysta",
     type: "SUV",
     price: "2,500",
-    image: "/images/vehicles/toyota-innova.png",
+    image: "/images/vehicles/toyota-innova.webp",
     status: "Available",
     specs: [
       { icon: <Fuel size={12} />, text: "Diesel" },
