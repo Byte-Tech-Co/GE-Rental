@@ -21,15 +21,15 @@ export function Footer() {
               Guwahati&apos;s premium vehicle rental service. Helping travelers conquer the hills and valleys of Northeast India since 2018.
             </p>
             <div className="flex items-center gap-4">
-              <button className="w-10 h-10 rounded-full bg-[var(--color-brand-white)]/5 border border-[var(--color-brand-white)]/10 flex items-center justify-center text-[var(--color-brand-white)] hover:bg-[var(--color-red)] hover:border-[var(--color-red)] transition-colors">
+              <a href="https://instagram.com" aria-label="Follow us on Instagram" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-[var(--color-brand-white)]/5 border border-[var(--color-brand-white)]/10 flex items-center justify-center text-[var(--color-brand-white)] hover:bg-[var(--color-red)] hover:border-[var(--color-red)] transition-colors">
                 <Instagram size={18} />
-              </button>
-              <button className="w-10 h-10 rounded-full bg-[var(--color-brand-white)]/5 border border-[var(--color-brand-white)]/10 flex items-center justify-center text-[var(--color-brand-white)] hover:bg-[var(--color-red)] hover:border-[var(--color-red)] transition-colors">
+              </a>
+              <a href="https://facebook.com" aria-label="Follow us on Facebook" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-[var(--color-brand-white)]/5 border border-[var(--color-brand-white)]/10 flex items-center justify-center text-[var(--color-brand-white)] hover:bg-[var(--color-red)] hover:border-[var(--color-red)] transition-colors">
                 <Facebook size={18} />
-              </button>
-              <button className="w-10 h-10 rounded-full bg-[var(--color-brand-white)]/5 border border-[var(--color-brand-white)]/10 flex items-center justify-center text-[var(--color-brand-white)] hover:bg-[var(--color-red)] hover:border-[var(--color-red)] transition-colors">
+              </a>
+              <a href="https://twitter.com" aria-label="Follow us on Twitter" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-[var(--color-brand-white)]/5 border border-[var(--color-brand-white)]/10 flex items-center justify-center text-[var(--color-brand-white)] hover:bg-[var(--color-red)] hover:border-[var(--color-red)] transition-colors">
                 <Twitter size={18} />
-              </button>
+              </a>
             </div>
           </div>
 

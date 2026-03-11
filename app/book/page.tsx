@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
-import { motion, AnimatePresence } from "motion/react";
+import { motion, AnimatePresence, useReducedMotion } from "motion/react";
 import Image from "next/image";
 import Link from "next/link";
 import { Navbar } from "@/components/sections/Navbar";
@@ -37,6 +37,7 @@ function getDaysBetween(start: Date, end: Date): number {
 export default function BookPage() {
   const searchParams = useSearchParams();
   const vehicleId = searchParams.get("vehicle");
+  const reducedMotion = useReducedMotion();
 
   const [step, setStep] = useState(1);
   const [selectedVehicle, setSelectedVehicle] = useState<Vehicle | null>(null);
@@ -119,8 +120,11 @@ export default function BookPage() {
           }}
         />
         <motion.div
-          animate={{ scale: [1, 1.2, 1], opacity: [0.2, 0.35, 0.2] }}
-          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+          animate={{ 
+            scale: reducedMotion ? 1 : [1, 1.2, 1], 
+            opacity: reducedMotion ? 0.2 : [0.2, 0.35, 0.2] 
+          }}
+          transition={{ duration: reducedMotion ? 0 : 8, repeat: Infinity, ease: "easeInOut" }}
           className="absolute top-[-20%] right-[-10%] w-[400px] h-[400px] rounded-full bg-[radial-gradient(circle,_rgba(239,35,60,0.2)_0%,_transparent_70%)] blur-3xl pointer-events-none"
         />
         <div className="container mx-auto px-6 md:px-12 relative z-10">
@@ -275,15 +279,66 @@ export default function BookPage() {
                   </h2>
                   <div className="space-y-4">
                     <div>
-                      <label className="block text-sm font-medium text-[var(--color-forest)] mb-2">
+                      <label htmlFor="name" className="block text-sm font-medium text-[var(--color-forest)] mb-2">
                         Full name *
                       </label>
                       <input
                         type="text"
+                        id="name"
+                        name="name"
                         value={name}
                         onChange={(e) => setName(e.target.value)}
                         required
+                        autoComplete="name"
                         placeholder="Your name"
+                        className="w-full px-4 py-3 rounded-xl border border-[#e5e7eb] bg-white text-[var(--color-forest)] placeholder:text-[var(--color-brand-muted)] focus:outline-none focus:ring-2 focus:ring-[var(--color-red)]/40 focus:border-[var(--color-red)]"
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="email" className="block text-sm font-medium text-[var(--color-forest)] mb-2">
+                        Email *
+                      </label>
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        required
+                        autoComplete="email"
+                        placeholder="you@example.com"
+                        className="w-full px-4 py-3 rounded-xl border border-[#e5e7eb] bg-white text-[var(--color-forest)] placeholder:text-[var(--color-brand-muted)] focus:outline-none focus:ring-2 focus:ring-[var(--color-red)]/40 focus:border-[var(--color-red)]"
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="phone" className="block text-sm font-medium text-[var(--color-forest)] mb-2">
+                        Phone *
+                      </label>
+                      <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        value={phone}
+                        onChange={(e) => setPhone(e.target.value)}
+                        required
+                        autoComplete="tel"
+                        placeholder="+91 98765 43210"
+                        className="w-full px-4 py-3 rounded-xl border border-[#e5e7eb] bg-white text-[var(--color-forest)] placeholder:text-[var(--color-brand-muted)] focus:outline-none focus:ring-2 focus:ring-[var(--color-red)]/40 focus:border-[var(--color-red)]"
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="license" className="block text-sm font-medium text-[var(--color-forest)] mb-2">
+                        Driving license number *
+                      </label>
+                      <input
+                        type="text"
+                        id="license"
+                        name="license"
+                        value={license}
+                        onChange={(e) => setLicense(e.target.value)}
+                        required
+                        autoComplete="off"
+                        placeholder="License number"
                         className="w-full px-4 py-3 rounded-xl border border-[#e5e7eb] bg-white text-[var(--color-forest)] placeholder:text-[var(--color-brand-muted)] focus:outline-none focus:ring-2 focus:ring-[var(--color-red)]/40 focus:border-[var(--color-red)]"
                       />
                     </div>

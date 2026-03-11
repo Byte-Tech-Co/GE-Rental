@@ -4,6 +4,7 @@ import { motion } from "motion/react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { useReducedMotion } from "@/lib/utils";
 
 const stats = [
   { value: "40+", label: "Vehicles" },
@@ -12,6 +13,7 @@ const stats = [
 ];
 
 export function Hero() {
+  const reducedMotion = useReducedMotion();
   return (
     <section className="relative w-full h-screen overflow-hidden flex items-center selection:bg-[var(--color-red)] selection:text-white">
       {/* Background Image */}
@@ -29,26 +31,26 @@ export function Hero() {
       {/* Animated gradient orbs */}
       <motion.div
         animate={{
-          scale: [1, 1.2, 1],
-          opacity: [0.3, 0.5, 0.3],
+          scale: reducedMotion ? 1 : [1, 1.2, 1],
+          opacity: reducedMotion ? 0.3 : [0.3, 0.5, 0.3],
         }}
-        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+        transition={{ duration: reducedMotion ? 0 : 8, repeat: Infinity, ease: "easeInOut" }}
         className="absolute top-[-20%] right-[-10%] w-[600px] h-[600px] rounded-full bg-[radial-gradient(circle,_rgba(239,35,60,0.25)_0%,_transparent_70%)] blur-3xl"
       />
       <motion.div
         animate={{
-          scale: [1, 1.15, 1],
-          opacity: [0.2, 0.35, 0.2],
+          scale: reducedMotion ? 1 : [1, 1.15, 1],
+          opacity: reducedMotion ? 0.2 : [0.2, 0.35, 0.2],
         }}
-        transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+        transition={{ duration: reducedMotion ? 0 : 10, repeat: Infinity, ease: "easeInOut", delay: reducedMotion ? 0 : 2 }}
         className="absolute bottom-[-15%] left-[-5%] w-[500px] h-[500px] rounded-full bg-[radial-gradient(circle,_rgba(122,140,125,0.3)_0%,_transparent_70%)] blur-3xl"
       />
       <motion.div
         animate={{
-          scale: [1, 1.3, 1],
-          opacity: [0.15, 0.25, 0.15],
+          scale: reducedMotion ? 1 : [1, 1.3, 1],
+          opacity: reducedMotion ? 0.15 : [0.15, 0.25, 0.15],
         }}
-        transition={{ duration: 12, repeat: Infinity, ease: "easeInOut", delay: 4 }}
+        transition={{ duration: reducedMotion ? 0 : 12, repeat: Infinity, ease: "easeInOut", delay: reducedMotion ? 0 : 4 }}
         className="absolute top-[30%] left-[40%] w-[400px] h-[400px] rounded-full bg-[radial-gradient(circle,_rgba(239,35,60,0.15)_0%,_transparent_70%)] blur-3xl"
       />
 

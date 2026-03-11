@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { motion } from "motion/react";
+import { motion, useReducedMotion } from "motion/react";
 import { Navbar } from "@/components/sections/Navbar";
 import { Footer } from "@/components/sections/Footer";
 import Link from "next/link";
@@ -53,6 +53,7 @@ const socialLinks = [
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
+  const reducedMotion = useReducedMotion();
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -74,8 +75,11 @@ export default function ContactPage() {
           }}
         />
         <motion.div
-          animate={{ scale: [1, 1.2, 1], opacity: [0.2, 0.35, 0.2] }}
-          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+          animate={{ 
+            scale: reducedMotion ? 1 : [1, 1.2, 1], 
+            opacity: reducedMotion ? 0.2 : [0.2, 0.35, 0.2] 
+          }}
+          transition={{ duration: reducedMotion ? 0 : 8, repeat: Infinity, ease: "easeInOut" }}
           className="absolute top-[-20%] right-[-10%] w-[500px] h-[500px] rounded-full bg-[radial-gradient(circle,_rgba(239,35,60,0.2)_0%,_transparent_70%)] blur-3xl pointer-events-none"
         />
 
@@ -227,6 +231,7 @@ export default function ContactPage() {
                             id="name"
                             name="name"
                             required
+                            autoComplete="name"
                             className="w-full px-4 py-3 rounded-lg bg-[var(--color-brand-white)]/5 border border-[var(--color-brand-white)]/10 text-[var(--color-brand-white)] placeholder:text-[var(--color-brand-white)]/40 focus:outline-none focus:border-[var(--color-red)]/50 transition-colors"
                             placeholder="Your name"
                           />
@@ -240,6 +245,7 @@ export default function ContactPage() {
                             id="email"
                             name="email"
                             required
+                            autoComplete="email"
                             className="w-full px-4 py-3 rounded-lg bg-[var(--color-brand-white)]/5 border border-[var(--color-brand-white)]/10 text-[var(--color-brand-white)] placeholder:text-[var(--color-brand-white)]/40 focus:outline-none focus:border-[var(--color-red)]/50 transition-colors"
                             placeholder="you@example.com"
                           />
@@ -253,6 +259,7 @@ export default function ContactPage() {
                           type="tel"
                           id="phone"
                           name="phone"
+                          autoComplete="tel"
                           className="w-full px-4 py-3 rounded-lg bg-[var(--color-brand-white)]/5 border border-[var(--color-brand-white)]/10 text-[var(--color-brand-white)] placeholder:text-[var(--color-brand-white)]/40 focus:outline-none focus:border-[var(--color-red)]/50 transition-colors"
                           placeholder="+91 98765 43210"
                         />

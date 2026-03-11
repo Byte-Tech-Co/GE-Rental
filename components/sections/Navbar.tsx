@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { motion } from "motion/react";
+import { motion, useReducedMotion } from "motion/react";
 import Link from "next/link";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
@@ -9,6 +9,7 @@ import { Menu, X } from "lucide-react";
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const reducedMotion = useReducedMotion();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -73,10 +74,13 @@ export function Navbar() {
         <button
           className="md:hidden text-[var(--color-brand-white)] z-50 p-1"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
+          aria-expanded={mobileMenuOpen}
+          aria-controls="mobile-nav"
         >
           <motion.div
             animate={{ rotate: mobileMenuOpen ? 90 : 0 }}
-            transition={{ duration: 0.3 }}
+            transition={{ duration: reducedMotion ? 0 : 0.3 }}
           >
             {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </motion.div>
@@ -99,6 +103,7 @@ export function Navbar() {
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
             className="md:hidden bg-[var(--color-forest)] border-t border-white/10 relative z-50"
+            id="mobile-nav"
           >
             <div className="px-6 py-6 flex flex-col gap-4 items-center">
               {navLinks.map((link) => (

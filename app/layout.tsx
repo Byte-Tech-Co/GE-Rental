@@ -46,12 +46,20 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <head>
+        <meta name="color-scheme" content="light dark" />
+        <meta name="theme-color" content="#ef233c" />
         <link rel="preconnect" href="https://images.unsplash.com" />
         <link rel="dns-prefetch" href="https://images.unsplash.com" />
       </head>
       <body
         className={`${poppins.variable} antialiased font-sans`}
       >
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-[var(--color-red)] focus:text-white focus:rounded-full focus:font-semibold focus:text-sm"
+        >
+          Skip to main content
+        </a>
         {children}
       </body>
     </html>
